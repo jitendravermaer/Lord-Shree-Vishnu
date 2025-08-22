@@ -69,16 +69,69 @@ Lord Vishnu/
 ---
 
 ## 📖 Avatars Included
-1. Matsya – The Fish (saves the Vedas from the flood)  
-2. Kurma – The Tortoise (supports the churning of the ocean)  
-3. Varaha – The Boar (rescues the Earth from Hiranyaksha)  
-4. Narasimha – The Man-Lion (destroys Hiranyakashipu)  
-5. Vamana – The Dwarf (restores cosmic order from Bali)  
-6. Parashurama – The Warrior (destroys corrupt Kshatriyas)  
-7. Rama – The Prince of Ayodhya (hero of the Ramayana)  
-8. Krishna – The Divine Statesman (guide of the Mahabharata & Gita)  
-9. Buddha – The Enlightened One (path of peace and non-violence)  
-10. Kalki – The Future Warrior (to end the Kali Yuga)
+
+<table align="center">
+  <tr>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>1. Matsya – The Fish</b><br>
+      (saves the Vedas from the flood)<br>
+      <img src="images/matsya-avatar.jpg" alt="Matsya Avatar" width="400">
+    </td>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>2. Kurma – The Tortoise</b><br>
+      (supports the churning of the ocean)<br>
+      <img src="images/kurma-avatar.jpg" alt="Kurma Avatar" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>3. Varaha – The Boar</b><br>
+      (rescues the Earth from Hiranyaksha)<br>
+      <img src="images/varaha-avatar.jpg" alt="Varaha Avatar" width="400">
+    </td>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>4. Narasimha – The Man-Lion</b><br>
+      (destroys Hiranyakashipu)<br>
+      <img src="images/narasimha-avatar.jpg" alt="Narasimha Avatar" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>5. Vamana – The Dwarf</b><br>
+      (restores cosmic order from Bali)<br>
+      <img src="images/vamana-avatar.jpg" alt="Vamana Avatar" width="400">
+    </td>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>6. Parashurama – The Warrior</b><br>
+      (destroys corrupt Kshatriyas)<br>
+      <img src="images/parashurama-avatar.jpg" alt="Parashurama Avatar" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>7. Rama – The Prince of Ayodhya</b><br>
+      (hero of the Ramayana)<br>
+      <img src="images/rama-avatar.jpg" alt="Rama Avatar" width="400">
+    </td>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>8. Krishna – The Divine Statesman</b><br>
+      (guide of the Mahabharata & Gita)<br>
+      <img src="images/krishna-avatar.jpg" alt="Krishna Avatar" width="400">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>9. Buddha – The Enlightened One</b><br>
+      (path of peace and non-violence)<br>
+      <img src="images/buddha-avatar.jpg" alt="Buddha Avatar" width="400">
+    </td>
+    <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
+      <b>10. Kalki – The Future Warrior</b><br>
+      (to end the Kali Yuga)<br>
+      <img src="images/kalki-avatar.jpg" alt="Kalki Avatar" width="400">
+    </td>
+  </tr>
+</table>
 
 ---
 
