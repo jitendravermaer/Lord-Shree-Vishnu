@@ -1,0 +1,21 @@
+{
+  "pages": [
+    "index.html",
+    "avatar/buddha-avatar/buddha-avatar.html",
+    "avatar/kalki-avatar/kalki-avatar.html",
+    "avatar/krishna-avatar/krishna-avatar.html",
+    "avatar/kurma-avatar/kurma-avatar.html",
+    "avatar/matsya-avatar/matsya-avatar.html",
+    "avatar/mohini-avatar/mohini-avatar.html",
+    "avatar/narasimha-avatar/narasimha-avatar.html",
+    "avatar/parashurama-avatar/parashurama-avatar.html",
+    "avatar/rama-avatar/rama-avatar.html",
+    "avatar/vamana-avatar/vamana-avatar.html",
+    "avatar/varaha-avatar/varaha-avatar.html",
+    "brahma/brahma.html",
+    "devlok/devlok.html",
+    "lakshmi/lakshmi.html",
+    "parvati/parvati.html",
+    "shiva/shiva.html"
+  ]
+}

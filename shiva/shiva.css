@@ -1,0 +1,1424 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+    background: radial-gradient(ellipse at center, #0a0a2e 0%, #16213e 30%, #1a237e 70%, #283593 100%);
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Enhanced Cosmic Background */
+.cosmic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.destruction-wave {
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.08) 40%, transparent 70%);
+    border-radius: 50%;
+    animation: destructionPulse 15s infinite;
+}
+
+.trishul-particle {
+    position: absolute;
+    width: 15px;
+    height: 30px;
+    background: linear-gradient(180deg, rgba(255, 69, 0, 0.8), rgba(255, 140, 0, 0.6));
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: trishulFloat 10s ease-in-out infinite;
+}
+
+.sacred-ash {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, rgba(192, 192, 192, 0.7), rgba(169, 169, 169, 0.4));
+    border-radius: 50%;
+    animation: ashFloat 12s linear infinite;
+}
+
+.cosmic-serpent {
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(0, 255, 127, 0.6), rgba(50, 205, 50, 0.4), transparent);
+    border-radius: 2px;
+    animation: serpentMove 20s ease-in-out infinite;
+}
+
+@keyframes destructionPulse {
+
+    0%,
+    100% {
+        transform: scale(0.3) rotate(0deg);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.8) rotate(180deg);
+        opacity: 0.1;
+    }
+}
+
+@keyframes trishulFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    25% {
+        transform: translateY(-40px) rotate(90deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-80px) rotate(180deg);
+        opacity: 0.8;
+    }
+
+    75% {
+        transform: translateY(-40px) rotate(270deg);
+        opacity: 1;
+    }
+}
+
+@keyframes ashFloat {
+    0% {
+        transform: translateY(100vh) translateX(0px);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes serpentMove {
+
+    0%,
+    100% {
+        transform: translateX(-100px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(calc(100vw + 100px)) rotate(90deg);
+    }
+
+    50% {
+        transform: translateX(calc(100vw + 100px)) rotate(180deg);
+    }
+
+    75% {
+        transform: translateX(-100px) rotate(270deg);
+    }
+}
+
+.main-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Divine Header */
+.divine-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(75, 0, 130, 0.25), rgba(255, 69, 0, 0.2));
+    border-radius: 30px;
+    border: 3px solid rgba(138, 43, 226, 0.6);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.divine-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(138, 43, 226, 0.15), transparent);
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.divine-header .content {
+    position: relative;
+    z-index: 2;
+}
+
+.divine-header h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(45deg, #8a2be2, #4b0082, #ff4500, #ff8c00);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+    text-shadow: 0 0 40px rgba(138, 43, 226, 0.8);
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.divine-header .sanskrit {
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    color: #8a2be2;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 25px rgba(138, 43, 226, 0.8);
+}
+
+.divine-header .subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    color: #dda0dd;
+    font-style: italic;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Sacred Symbols */
+.sacred-symbols {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.symbol {
+    font-size: 3.5rem;
+    animation: symbolPulse 4s ease-in-out infinite;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.symbol::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #8a2be2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.symbol:hover::after {
+    opacity: 1;
+}
+
+.symbol:hover {
+    transform: scale(1.4) rotate(360deg);
+    text-shadow: 0 0 40px currentColor;
+}
+
+@keyframes symbolPulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+/* Nataraja Dance Section */
+.nataraja-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(138, 43, 226, 0.15), rgba(75, 0, 130, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 69, 0, 0.5);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.nataraja-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dance" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="rgba(255,69,0,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23dance)"/></svg>');
+    opacity: 0.3;
+}
+
+.nataraja-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #ff4500;
+    margin-bottom: 50px;
+    font-family: 'Noto Sans Devanagari', serif;
+    position: relative;
+    z-index: 2;
+}
+
+.dance-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.dance-visual {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #ff4500, #ff8c00, #8a2be2, #4b0082);
+    background-size: 400% 400%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    animation: danceRotation 8s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.dance-visual::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes danceRotation {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        background-position: 100% 0%;
+        transform: rotate(90deg) scale(1.1);
+    }
+
+    50% {
+        background-position: 100% 100%;
+        transform: rotate(180deg) scale(1);
+    }
+
+    75% {
+        background-position: 0% 100%;
+        transform: rotate(270deg) scale(1.1);
+    }
+}
+
+.dance-content h3 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #ff4500;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.dance-content .sanskrit-name {
+    font-size: 1.5rem;
+    color: #ff8c00;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.dance-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e6e6fa;
+    margin-bottom: 30px;
+}
+
+.dance-elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dance-element {
+    background: linear-gradient(45deg, rgba(255, 69, 0, 0.2), rgba(138, 43, 226, 0.15));
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 69, 0, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.dance-element:hover {
+    transform: scale(1.05);
+    border-color: #ff4500;
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
+}
+
+.dance-element-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.dance-element-name {
+    font-size: 1rem;
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+/* Forms of Shiva Section */
+.forms-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(75, 0, 130, 0.2), rgba(138, 43, 226, 0.15), rgba(255, 69, 0, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(138, 43, 226, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.forms-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #8a2be2;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.forms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.form-card {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.25), rgba(75, 0, 130, 0.2), rgba(255, 69, 0, 0.15));
+    border: 3px solid rgba(138, 43, 226, 0.5);
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #8a2be2, #4b0082, #ff4500, #8a2be2);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.form-card:hover::before {
+    opacity: 1;
+}
+
+.form-card:hover {
+    transform: translateY(-15px) rotateY(10deg);
+    box-shadow: 0 30px 60px rgba(138, 43, 226, 0.4);
+}
+
+.form-icon {
+    font-size: 5rem;
+    margin-bottom: 25px;
+    display: block;
+    animation: formGlow 4s ease-in-out infinite;
+}
+
+@keyframes formGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px currentColor;
+    }
+
+    50% {
+        text-shadow: 0 0 40px currentColor, 0 0 60px currentColor;
+    }
+}
+
+.form-name {
+    font-size: 1.8rem;
+    color: #8a2be2;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.form-sanskrit {
+    font-size: 1.2rem;
+    color: #ff8c00;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.form-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.form-powers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.power-tag {
+    background: rgba(255, 255, 255, 0.2);
+    color: #8a2be2;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+/* Sacred Weapons Section */
+.weapons-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(220, 20, 60, 0.15), rgba(138, 43, 226, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 69, 0, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.weapons-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #ff4500;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.weapons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.weapon-card {
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.25), rgba(220, 20, 60, 0.2), rgba(138, 43, 226, 0.15));
+    border: 3px solid rgba(255, 69, 0, 0.4);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.weapon-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 69, 0, 0.15), transparent);
+    animation: rotate 12s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.weapon-card:hover::before {
+    opacity: 1;
+}
+
+.weapon-card:hover {
+    transform: scale(1.05);
+    border-color: #ff4500;
+    box-shadow: 0 25px 50px rgba(255, 69, 0, 0.4);
+}
+
+.weapon-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 25px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.weapon-name {
+    font-size: 1.8rem;
+    color: #ff4500;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.weapon-sanskrit {
+    font-size: 1.2rem;
+    color: #ff8c00;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Noto Sans Devanagari', serif;
+    position: relative;
+    z-index: 2;
+}
+
+.weapon-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.weapon-powers {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #ff4500;
+    position: relative;
+    z-index: 2;
+}
+
+.power-list {
+    font-size: 0.9rem;
+    color: #dda0dd;
+    line-height: 1.6;
+}
+
+/* Avatars Section */
+.avatars-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.15), rgba(255, 69, 0, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(138, 43, 226, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.avatars-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #8a2be2;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.avatars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.avatar-card {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.25), rgba(75, 0, 130, 0.2), rgba(255, 69, 0, 0.15));
+    border: 3px solid rgba(138, 43, 226, 0.4);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #8a2be2, #4b0082, #ff4500, #8a2be2);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.avatar-card:hover::before {
+    opacity: 1;
+}
+
+.avatar-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4);
+}
+
+.avatar-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.avatar-visual {
+    font-size: 5rem;
+    min-width: 100px;
+    text-align: center;
+    animation: avatarGlow 4s ease-in-out infinite;
+}
+
+@keyframes avatarGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px currentColor;
+    }
+
+    50% {
+        text-shadow: 0 0 40px currentColor, 0 0 60px currentColor;
+    }
+}
+
+.avatar-info h3 {
+    font-size: 1.8rem;
+    color: #8a2be2;
+    margin-bottom: 10px;
+}
+
+.avatar-info .sanskrit-name {
+    font-size: 1.1rem;
+    color: #ff8c00;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.avatar-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.avatar-powers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.avatar-tag {
+    background: linear-gradient(45deg, #8a2be2, #4b0082);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.avatar-story {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 4px solid #8a2be2;
+    font-size: 0.9rem;
+    color: #e6e6fa;
+    line-height: 1.6;
+}
+
+/* Enemies Section */
+.enemies-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.25), rgba(220, 20, 60, 0.2), rgba(255, 69, 0, 0.15));
+    border-radius: 30px;
+    border: 3px solid rgba(220, 20, 60, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.enemies-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #dc143c;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 30px rgba(220, 20, 60, 0.8);
+}
+
+.enemies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.enemy-card {
+    background: linear-gradient(135deg, rgba(139, 0, 0, 0.25), rgba(220, 20, 60, 0.2), rgba(255, 69, 0, 0.15));
+    border: 3px solid rgba(220, 20, 60, 0.4);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.enemy-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #dc143c, #8b0000, #ff4500, #dc143c);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.enemy-card:hover::before {
+    opacity: 1;
+}
+
+.enemy-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(220, 20, 60, 0.4);
+}
+
+.enemy-visual {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: enemyPulse 3s ease-in-out infinite;
+}
+
+@keyframes enemyPulse {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px #dc143c;
+        transform: scale(1);
+    }
+
+    50% {
+        text-shadow: 0 0 40px #dc143c, 0 0 60px #8b0000;
+        transform: scale(1.1);
+    }
+}
+
+.enemy-content h3 {
+    font-size: 1.8rem;
+    color: #dc143c;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.enemy-content .sanskrit-name {
+    font-size: 1.1rem;
+    color: #ff8c00;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-align: center;
+}
+
+.enemy-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.enemy-powers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.threat-tag {
+    background: linear-gradient(45deg, #dc143c, #8b0000);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.conflict-resolution {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 4px solid #8a2be2;
+    font-size: 0.9rem;
+    color: #e6e6fa;
+    line-height: 1.6;
+}
+
+/* Guardians Section */
+.guardians-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(0, 100, 0, 0.2), rgba(34, 139, 34, 0.15), rgba(138, 43, 226, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(34, 139, 34, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.guardians-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #32cd32;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 30px rgba(50, 205, 50, 0.8);
+}
+
+.guardians-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.guardian-card {
+    background: linear-gradient(135deg, rgba(0, 100, 0, 0.2), rgba(34, 139, 34, 0.15), rgba(138, 43, 226, 0.1));
+    border: 3px solid rgba(34, 139, 34, 0.4);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.guardian-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #32cd32, #228b22, #8a2be2, #32cd32);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.guardian-card:hover::before {
+    opacity: 1;
+}
+
+.guardian-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(50, 205, 50, 0.4);
+}
+
+.guardian-visual {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: guardianGlow 4s ease-in-out infinite;
+}
+
+@keyframes guardianGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px #32cd32;
+        transform: scale(1);
+    }
+
+    50% {
+        text-shadow: 0 0 40px #32cd32, 0 0 60px #8a2be2;
+        transform: scale(1.05);
+    }
+}
+
+.guardian-content h3 {
+    font-size: 1.8rem;
+    color: #32cd32;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.guardian-content .sanskrit-name {
+    font-size: 1.1rem;
+    color: #ff8c00;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-align: center;
+}
+
+.guardian-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.guardian-powers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.guardian-tag {
+    background: linear-gradient(45deg, #32cd32, #228b22);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.guardian-duties {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 4px solid #32cd32;
+    font-size: 0.9rem;
+    color: #e6e6fa;
+    line-height: 1.6;
+}
+
+/* Sacred Places Section */
+.places-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.15), rgba(255, 69, 0, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(138, 43, 226, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.places-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #8a2be2;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.place-card {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.25), rgba(75, 0, 130, 0.2), rgba(255, 69, 0, 0.15));
+    border: 3px solid rgba(138, 43, 226, 0.4);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.place-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(138, 43, 226, 0.15), transparent);
+    animation: rotate 15s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.place-card:hover::before {
+    opacity: 1;
+}
+
+.place-card:hover {
+    transform: scale(1.05);
+    border-color: #8a2be2;
+    box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4);
+}
+
+.place-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 25px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.place-name {
+    font-size: 1.8rem;
+    color: #8a2be2;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.place-sanskrit {
+    font-size: 1.2rem;
+    color: #ff8c00;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Noto Sans Devanagari', serif;
+    position: relative;
+    z-index: 2;
+}
+
+.place-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.place-significance {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #8a2be2;
+    position: relative;
+    z-index: 2;
+}
+
+.significance-title {
+    font-size: 0.9rem;
+    color: #ff8c00;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.significance-text {
+    font-size: 0.9rem;
+    color: #dda0dd;
+    line-height: 1.6;
+}
+
+/* Image Gallery */
+.image-gallery {
+    margin: 80px 0;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #8a2be2;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #8a2be2, #4b0082, #ff4500, #ff8c00);
+    background-size: 400% 400%;
+    border-radius: 20px;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: gradientMove 12s ease-in-out infinite;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.gallery-item:hover::before {
+    left: 100%;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(138, 43, 226, 0.4);
+    border-color: #8a2be2;
+}
+
+@keyframes gradientMove {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.gallery-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    z-index: 1;
+}
+
+.gallery-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.gallery-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(75, 0, 130, 0.25), rgba(255, 69, 0, 0.2));
+    border: 3px solid rgba(138, 43, 226, 0.6);
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+    backdrop-filter: blur(20px);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #8a2be2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #ff4500;
+    transform: scale(1.2);
+}
+
+.showcase-image {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    background: linear-gradient(135deg, #8a2be2, #4b0082, #ff4500, #ff8c00);
+    background-size: 400% 400%;
+    border-radius: 20px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    animation: gradientMove 8s ease-in-out infinite;
+}
+
+.showcase-title {
+    font-size: 2.5rem;
+    color: #8a2be2;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.showcase-description {
+    font-size: 1.2rem;
+    color: #e6e6fa;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.showcase-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.showcase-tag {
+    background: linear-gradient(45deg, #8a2be2, #4b0082, #ff4500);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dance-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .forms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .weapons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .avatars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .enemies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guardians-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .avatar-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .divine-header {
+        padding: 60px 20px;
+    }
+
+    .nataraja-section,
+    .forms-section,
+    .weapons-section,
+    .avatars-section,
+    .enemies-section,
+    .guardians-section,
+    .places-section {
+        padding: 40px 20px;
+    }
+
+    .sacred-symbols {
+        gap: 30px;
+    }
+
+    .symbol {
+        font-size: 2.5rem;
+    }
+
+    .dance-elements {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .showcase-title {
+        font-size: 2rem;
+    }
+}

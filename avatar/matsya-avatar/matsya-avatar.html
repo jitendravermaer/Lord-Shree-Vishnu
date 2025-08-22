@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/om.png" type="image/x-icon">
+    <title>मत्स्य अवतार - The Divine Fish Avatar | First Incarnation of Lord Vishnu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+            background: radial-gradient(ellipse at center, #001a33 0%, #003366 30%, #0066cc 70%, #87ceeb 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ocean Background Animation */
+        .ocean-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .wave {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 191, 255, 0.1) 0%, rgba(30, 144, 255, 0.05) 50%, transparent 70%);
+            border-radius: 50%;
+            animation: oceanWave 20s infinite linear;
+        }
+
+        .wave:nth-child(2) {
+            animation-delay: -10s;
+            animation-duration: 25s;
+        }
+
+        .fish-particle {
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.8), rgba(0, 191, 255, 0.6));
+            clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+            animation: fishSwim 12s ease-in-out infinite;
+        }
+
+        .water-bubble {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: radial-gradient(circle, rgba(173, 216, 230, 0.8), rgba(0, 191, 255, 0.4));
+            border-radius: 50%;
+            animation: bubbleRise 8s linear infinite;
+        }
+
+        .divine-light {
+            position: absolute;
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.8), transparent);
+            border-radius: 2px;
+            animation: divineSwim 15s ease-in-out infinite;
+        }
+
+        @keyframes oceanWave {
+
+            0%,
+            100% {
+                transform: scale(0.8) rotate(0deg);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.5) rotate(180deg);
+                opacity: 0.1;
+            }
+        }
+
+        @keyframes fishSwim {
+
+            0%,
+            100% {
+                transform: translateX(-100px) translateY(0px) rotate(0deg);
+                opacity: 0.7;
+            }
+
+            25% {
+                transform: translateX(50vw) translateY(-50px) rotate(10deg);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateX(100vw) translateY(-100px) rotate(0deg);
+                opacity: 0.8;
+            }
+
+            75% {
+                transform: translateX(50vw) translateY(-50px) rotate(-10deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bubbleRise {
+            0% {
+                transform: translateY(100vh) translateX(0px);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) translateX(50px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes divineSwim {
+
+            0%,
+            100% {
+                transform: translateX(-200px) translateY(20vh) rotate(0deg);
+            }
+
+            25% {
+                transform: translateX(calc(100vw + 200px)) translateY(40vh) rotate(5deg);
+            }
+
+            50% {
+                transform: translateX(calc(100vw + 200px)) translateY(60vh) rotate(0deg);
+            }
+
+            75% {
+                transform: translateX(-200px) translateY(80vh) rotate(-5deg);
+            }
+        }
+
+        .main-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Divine Header */
+        .divine-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(30, 144, 255, 0.25), rgba(255, 215, 0, 0.2));
+            border-radius: 30px;
+            border: 3px solid rgba(0, 191, 255, 0.6);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .divine-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(0, 191, 255, 0.2), transparent);
+            animation: rotate 25s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .divine-header .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .divine-header h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            background: linear-gradient(45deg, #00bfff, #1e90ff, #ffd700, #87ceeb);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+            text-shadow: 0 0 40px rgba(0, 191, 255, 0.8);
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .divine-header .sanskrit {
+            font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+            color: #00bfff;
+            margin-bottom: 20px;
+            font-family: 'Noto Sans Devanagari', serif;
+            text-shadow: 0 0 25px rgba(0, 191, 255, 0.8);
+        }
+
+        .divine-header .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+            color: #87ceeb;
+            font-style: italic;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* Sacred Symbols */
+        .sacred-symbols {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .symbol {
+            font-size: 3.5rem;
+            animation: symbolFloat 4s ease-in-out infinite;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .symbol::after {
+            content: attr(title);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: #00bfff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .symbol:hover::after {
+            opacity: 1;
+        }
+
+        .symbol:hover {
+            transform: scale(1.3) rotate(360deg);
+            text-shadow: 0 0 40px currentColor;
+        }
+
+        @keyframes symbolFloat {
+
+            0%,
+            100% {
+                opacity: 0.8;
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(-10px) scale(1.1);
+            }
+        }
+
+        /* Story Section */
+        .story-section {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.2), rgba(30, 144, 255, 0.15), rgba(255, 215, 0, 0.1));
+            border-radius: 30px;
+            border: 3px solid rgba(0, 191, 255, 0.5);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="fish" x="0" y="0" width="25" height="25" patternUnits="userSpaceOnUse"><ellipse cx="12.5" cy="12.5" rx="8" ry="4" fill="rgba(0,191,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23fish)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .story-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #00bfff;
+            margin-bottom: 60px;
+            font-family: 'Noto Sans Devanagari', serif;
+            position: relative;
+            z-index: 2;
+        }
+
+        .story-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .story-chapter {
+            background: linear-gradient(135deg, rgba(0, 191, 255, 0.25), rgba(30, 144, 255, 0.2), rgba(255, 215, 0, 0.15));
+            border: 3px solid rgba(0, 191, 255, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-chapter::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00bfff, #1e90ff, #ffd700, #00bfff);
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .story-chapter:hover::before {
+            opacity: 1;
+        }
+
+        .story-chapter:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 191, 255, 0.4);
+        }
+
+        .chapter-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .chapter-icon {
+            font-size: 4rem;
+            min-width: 80px;
+            text-align: center;
+            animation: chapterGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes chapterGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px currentColor;
+            }
+
+            50% {
+                text-shadow: 0 0 40px currentColor, 0 0 60px currentColor;
+            }
+        }
+
+        .chapter-info h3 {
+            font-size: 1.8rem;
+            color: #00bfff;
+            margin-bottom: 10px;
+        }
+
+        .chapter-info .sanskrit-title {
+            font-size: 1.1rem;
+            color: #ffd700;
+            font-family: 'Noto Sans Devanagari', serif;
+        }
+
+        .chapter-text {
+            font-size: 1.1rem;
+            color: #e6f3ff;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .chapter-significance {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #00bfff;
+            font-size: 1rem;
+            color: #b3d9ff;
+            line-height: 1.6;
+        }
+
+        /* Verses Section */
+        .verses-section {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(0, 191, 255, 0.15), rgba(255, 215, 0, 0.1));
+            border-radius: 30px;
+            border: 3px solid rgba(30, 144, 255, 0.5);
+            backdrop-filter: blur(20px);
+        }
+
+        .verses-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #1e90ff;
+            margin-bottom: 60px;
+            font-family: 'Noto Sans Devanagari', serif;
+        }
+
+        .verses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+        }
+
+        .verse-card {
+            background: linear-gradient(135deg, rgba(30, 144, 255, 0.25), rgba(0, 191, 255, 0.2), rgba(255, 215, 0, 0.15));
+            border: 3px solid rgba(30, 144, 255, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .verse-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #1e90ff, #00bfff, #ffd700, #1e90ff);
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .verse-card:hover::before {
+            opacity: 1;
+        }
+
+        .verse-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(30, 144, 255, 0.4);
+        }
+
+        .verse-visual {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 25px;
+            animation: verseGlow 5s ease-in-out infinite;
+        }
+
+        @keyframes verseGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px #1e90ff;
+                transform: scale(1);
+            }
+
+            50% {
+                text-shadow: 0 0 40px #1e90ff, 0 0 60px #00bfff;
+                transform: scale(1.05);
+            }
+        }
+
+        .verse-content h3 {
+            font-size: 1.6rem;
+            color: #1e90ff;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .verse-sanskrit {
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-family: 'Noto Sans Devanagari', serif;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            line-height: 1.8;
+        }
+
+        .verse-translation {
+            font-size: 1rem;
+            color: #e6f3ff;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .verse-meaning {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 4px solid #1e90ff;
+            font-size: 0.95rem;
+            color: #b3d9ff;
+            line-height: 1.6;
+        }
+
+        /* Significance Section */
+        .significance-section {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(0, 191, 255, 0.15), rgba(30, 144, 255, 0.1));
+            border-radius: 30px;
+            border: 3px solid rgba(255, 215, 0, 0.5);
+            backdrop-filter: blur(20px);
+        }
+
+        .significance-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #ffd700;
+            margin-bottom: 60px;
+            font-family: 'Noto Sans Devanagari', serif;
+        }
+
+        .significance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .significance-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(0, 191, 255, 0.2), rgba(30, 144, 255, 0.15));
+            border: 3px solid rgba(255, 215, 0, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .significance-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.15), transparent);
+            animation: rotate 12s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .significance-card:hover::before {
+            opacity: 1;
+        }
+
+        .significance-card:hover {
+            transform: scale(1.05);
+            border-color: #ffd700;
+            box-shadow: 0 25px 50px rgba(255, 215, 0, 0.4);
+        }
+
+        .significance-icon {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 25px;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .significance-name {
+            font-size: 1.6rem;
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        .significance-description {
+            font-size: 1rem;
+            color: #e6f3ff;
+            line-height: 1.7;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .verses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .significance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chapter-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .divine-header {
+                padding: 60px 20px;
+            }
+
+            .story-section,
+            .verses-section,
+            .significance-section {
+                padding: 40px 20px;
+            }
+
+            .sacred-symbols {
+                gap: 30px;
+            }
+
+            .symbol {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 10px;
+            }
+
+            .verses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .verse-card {
+                padding: 25px;
+            }
+
+            .verse-sanskrit {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+
+<!-- Inject common assets loader (adds common.css & common.js dynamically) -->
+<script>
+(function(){
+  var marker = "/Lord Vishnu/";
+  var p = decodeURI(location.pathname);
+  var idx = p.indexOf(marker);
+  var root = idx >= 0 ? p.substring(0, idx + marker.length) : (document.baseURI || "/");
+  // Load common.css
+  var link = document.createElement('link'); link.rel='stylesheet'; link.href = root + 'common.css'; document.head.appendChild(link);
+  // Load common.js
+  var s = document.createElement('script'); s.src = root + 'common.js'; document.head.appendChild(s);
+})();
+</script>
+
+</head>
+
+<body>
+<div id="global-nav"></div>
+
+    <div class="ocean-bg">
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="divine-header">
+            <div class="content">
+                <div class="sanskrit">॥ ॐ नमो भगवते मत्स्याय ॥</div>
+                <h1>Matsya Avatar - The Divine Fish</h1>
+                <div class="subtitle">First Incarnation of Lord Vishnu • Savior of Humanity • Protector of Sacred
+                    Knowledge</div>
+                <div class="sacred-symbols">
+                    <span class="symbol" title="Divine Fish">🐟</span>
+                    <span class="symbol" title="Sacred Conch">🐚</span>
+                    <span class="symbol" title="Divine Boat">⛵</span>
+                    <span class="symbol" title="Sacred Vedas">📜</span>
+                    <span class="symbol" title="Cosmic Waters">🌊</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <h2 class="story-title">दिव्य कथा (Divine Story)</h2>
+            <div class="story-content">
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">🌊</div>
+                        <div class="chapter-info">
+                            <h3>The Great Deluge Begins</h3>
+                            <div class="sanskrit-title">महाप्रलय का आरम्भ</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        At the end of the previous kalpa (cosmic cycle), when the time came for the great dissolution
+                        (pralaya), the entire universe was destined to be submerged under the cosmic waters. The demon
+                        Hayagriva had stolen the sacred Vedas from Lord Brahma while he was sleeping, threatening to
+                        destroy all divine knowledge and dharma. The earth, along with all its creatures and the
+                        repository of sacred wisdom, faced complete annihilation under the rising waters of destruction.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Cosmic Significance:</strong> This represents the cyclical nature of creation and
+                        destruction in Hindu cosmology, where each cosmic cycle ends in dissolution before a new
+                        creation begins. The theft of Vedas symbolizes the loss of divine knowledge and moral order.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">🐟</div>
+                        <div class="chapter-info">
+                            <h3>The Divine Fish Appears</h3>
+                            <div class="sanskrit-title">दिव्य मत्स्य का प्रकट्य</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        Seeing the impending catastrophe, Lord Vishnu incarnated as Matsya, a divine fish of enormous
+                        proportions. Initially appearing as a small fish to King Satyavrata (later known as Vaivasvata
+                        Manu), the avatar gradually grew to cosmic dimensions. The fish possessed divine radiance,
+                        golden scales that shimmered like the sun, and eyes that held the wisdom of the universe. This
+                        magnificent form was capable of navigating the turbulent cosmic waters and carrying the seeds of
+                        the next creation.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Divine Manifestation:</strong> The fish form represents life's ability to survive in the
+                        primordial waters of creation. The gradual growth from small to cosmic size symbolizes the
+                        evolution of consciousness and divine intervention scaling to meet the magnitude of the crisis.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">👑</div>
+                        <div class="chapter-info">
+                            <h3>King Satyavrata's Devotion</h3>
+                            <div class="sanskrit-title">राजा सत्यव्रत की भक्ति</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        King Satyavrata, a righteous ruler and devoted follower of dharma, was performing his morning
+                        ablutions in the river when he found a tiny fish in his water pot. The fish pleaded for
+                        protection, and the compassionate king, moved by its request, placed it in a larger vessel. As
+                        the fish continued to grow, requiring ever-larger containers and finally the ocean itself, the
+                        king realized this was no ordinary creature but a divine manifestation. His unwavering devotion
+                        and service to the fish earned him the privilege of being chosen to preserve humanity.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Devotional Teaching:</strong> King Satyavrata's story illustrates how compassion toward
+                        all beings, regardless of their apparent insignificance, leads to divine grace. His readiness to
+                        serve without question demonstrates the ideal devotee's attitude.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">⛵</div>
+                        <div class="chapter-info">
+                            <h3>The Divine Rescue Mission</h3>
+                            <div class="sanskrit-title">दिव्य रक्षा अभियान</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        As the cosmic deluge began, Matsya instructed King Satyavrata to build a massive boat and gather
+                        representatives of all species, the seven great sages (Saptarishis), medicinal herbs, seeds of
+                        all plants, and precious gems. When the waters rose to cover the entire earth, the divine fish
+                        appeared with a horn on its head. The cosmic serpent Vasuki was used as a rope to tie the boat
+                        to Matsya's horn. Throughout the tempestuous journey across the cosmic ocean, the divine fish
+                        protected all life forms and imparted sacred knowledge to ensure the continuity of dharma.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Preservation Wisdom:</strong> This episode teaches the importance of preserving
+                        biodiversity, knowledge, and cultural heritage during times of crisis. The boat represents the
+                        vessel of dharma that carries civilization through turbulent times.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">📜</div>
+                        <div class="chapter-info">
+                            <h3>Recovery of the Vedas</h3>
+                            <div class="sanskrit-title">वेदों की पुनर्प्राप्ति</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        While protecting the boat and its precious cargo, Matsya also engaged in a fierce battle with
+                        the demon Hayagriva in the depths of the cosmic ocean. The demon, who had stolen the Vedas
+                        thinking to destroy all divine knowledge, was defeated by the supreme power of the divine fish.
+                        Matsya recovered the sacred Vedas and restored them to Lord Brahma, ensuring that divine wisdom
+                        would continue to guide creation in the new cosmic cycle. This victory represented the triumph
+                        of knowledge over ignorance and order over chaos.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Knowledge Preservation:</strong> The recovery of Vedas symbolizes the eternal nature of
+                        divine wisdom and the cosmic responsibility to preserve and transmit sacred knowledge across
+                        generations and cosmic cycles.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">🌅</div>
+                        <div class="chapter-info">
+                            <h3>New Creation Begins</h3>
+                            <div class="sanskrit-title">नव सृष्टि का आरम्भ</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        After the cosmic deluge subsided, Matsya safely delivered the boat to the peak of Mount Himavan,
+                        which had emerged from the receding waters. King Satyavrata, now blessed to become Vaivasvata
+                        Manu, was entrusted with the responsibility of repopulating the earth and establishing dharma in
+                        the new age. The seeds, animals, sages, and knowledge preserved during the journey became the
+                        foundation for the new creation. Before departing, Matsya blessed Manu with divine wisdom and
+                        the authority to guide humanity according to righteous principles.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Renewal and Hope:</strong> This conclusion represents the cyclical nature of existence,
+                        where destruction is followed by renewal. It emphasizes humanity's role as stewards of creation
+                        and the importance of righteous leadership in establishing a just society.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="verses-section">
+            <h2 class="verses-title">पवित्र श्लोक (Sacred Verses)</h2>
+            <div class="verses-grid">
+                <div class="verse-card">
+                    <div class="verse-visual">🕉️</div>
+                    <div class="verse-content">
+                        <h3>Matsya Gayatri Mantra</h3>
+                        <div class="verse-sanskrit">
+                            ॐ मत्स्यरूपाय विद्महे<br>
+                            सहस्राक्षाय धीमहि<br>
+                            तन्नो मत्स्यः प्रचोदयात्॥
+                        </div>
+                        <div class="verse-translation">
+                            "Om, let us meditate on the fish-formed Lord,<br>
+                            Let us contemplate the thousand-eyed one,<br>
+                            May that Matsya inspire and guide us."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Spiritual Meaning:</strong> This Gayatri mantra invokes the divine fish avatar,
+                            seeking guidance and protection. The "thousand-eyed" refers to Vishnu's all-seeing divine
+                            vision that protects devotees from all directions and dangers.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">🐟</div>
+                    <div class="verse-content">
+                        <h3>Bhagavata Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            स वै किलायं पुरुषः पुराणो<br>
+                            य एक आसीदविशेष आत्मा<br>
+                            अग्रे गुणेभ्यो जगदीश्वरो यः<br>
+                            स एव भूयो निजवीर्यधाम्ना॥
+                        </div>
+                        <div class="verse-translation">
+                            "He is indeed the ancient Supreme Person,<br>
+                            Who alone existed as the undifferentiated Self,<br>
+                            Before the material qualities, the Lord of the universe,<br>
+                            He alone manifests again by His own divine power."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Cosmic Truth:</strong> This verse establishes Matsya as the eternal Supreme Being
+                            who exists before creation and manifests through His divine power to protect and preserve
+                            the universe during times of cosmic dissolution.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">🌊</div>
+                    <div class="verse-content">
+                        <h3>Vishnu Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            प्रलयार्णवमध्यस्थो<br>
+                            नौकायां स्थितवान् मनुः<br>
+                            आसीन्मत्स्येन नाथेन<br>
+                            परित्राणं गतो नृप॥
+                        </div>
+                        <div class="verse-translation">
+                            "In the midst of the deluge waters,<br>
+                            Manu situated in the boat,<br>
+                            Was protected by the fish Lord,<br>
+                            And thus attained salvation, O King."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Divine Protection:</strong> This verse describes how Manu, representing humanity,
+                            was saved by Matsya's divine intervention. It symbolizes how divine grace protects the
+                            righteous during times of universal crisis and transformation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">📜</div>
+                    <div class="verse-content">
+                        <h3>Matsya Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            वेदान् हयग्रीवाद् रक्षित्वा<br>
+                            ब्रह्माणं प्रत्यपादयत्<br>
+                            मत्स्यरूपेण भगवान्<br>
+                            विष्णुः परमकारुणः॥
+                        </div>
+                        <div class="verse-translation">
+                            "Having protected the Vedas from Hayagriva,<br>
+                            He restored them to Brahma,<br>
+                            In the form of a fish, the supremely compassionate<br>
+                            Lord Vishnu accomplished this."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Knowledge Preservation:</strong> This verse highlights Matsya's role in preserving
+                            divine knowledge. It emphasizes that the protection and transmission of sacred wisdom is a
+                            divine responsibility and act of supreme compassion.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">⛵</div>
+                    <div class="verse-content">
+                        <h3>Padma Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            नावं बद्ध्वा महानागे<br>
+                            शृङ्गे तस्य महात्मनः<br>
+                            तारयामास लोकांस्त्रीन्<br>
+                            मत्स्यो भगवतः प्रभुः॥
+                        </div>
+                        <div class="verse-translation">
+                            "Tying the boat to the great serpent<br>
+                            On the horn of that great soul,<br>
+                            The fish form of the Lord<br>
+                            Delivered all the three worlds."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Universal Salvation:</strong> This verse describes the practical method of rescue
+                            and emphasizes that Matsya's salvation extended to all three worlds (earth, heaven, and
+                            netherworld), showing the universal scope of divine compassion.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">🌅</div>
+                    <div class="verse-content">
+                        <h3>Agni Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            कल्पादौ सागरे जातो<br>
+                            ब्रह्माण्डं परिरक्षति<br>
+                            मत्स्यावतारो भगवान्<br>
+                            सर्वलोकहितैषिणः॥
+                        </div>
+                        <div class="verse-translation">
+                            "Born in the ocean at the beginning of the kalpa,<br>
+                            He protects the entire universe,<br>
+                            The Matsya avatar of the Lord<br>
+                            Who desires the welfare of all worlds."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Universal Welfare:</strong> This verse establishes Matsya as the cosmic protector
+                            who appears at the beginning of each creation cycle, emphasizing the divine commitment to
+                            the welfare and preservation of all existence.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="significance-section">
+            <h2 class="significance-title">आध्यात्मिक महत्व (Spiritual Significance)</h2>
+            <div class="significance-grid">
+                <div class="significance-card">
+                    <span class="significance-icon">🌊</span>
+                    <div class="significance-name">Cosmic Preservation</div>
+                    <div class="significance-description">
+                        Matsya represents the divine principle of preservation during cosmic dissolution. It teaches
+                        that even in the face of complete destruction, the divine ensures continuity of life and dharma,
+                        symbolizing hope and renewal in the darkest times.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">📚</span>
+                    <div class="significance-name">Knowledge Protection</div>
+                    <div class="significance-description">
+                        The recovery of Vedas from the demon Hayagriva symbolizes the eternal struggle between knowledge
+                        and ignorance. It emphasizes the sacred duty to preserve and transmit divine wisdom across
+                        generations and cosmic cycles.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">🤝</span>
+                    <div class="significance-name">Divine Compassion</div>
+                    <div class="significance-description">
+                        Matsya's response to King Satyavrata's small act of kindness demonstrates how divine grace
+                        responds to genuine compassion. It teaches that no act of kindness, however small, goes
+                        unnoticed by the divine.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">🔄</span>
+                    <div class="significance-name">Cyclical Time</div>
+                    <div class="significance-description">
+                        The avatar represents the Hindu concept of cyclical time, where creation, preservation, and
+                        destruction are eternal processes. It teaches acceptance of change while maintaining faith in
+                        divine protection and renewal.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">🌱</span>
+                    <div class="significance-name">Seed Preservation</div>
+                    <div class="significance-description">
+                        The preservation of seeds, animals, and sages represents the importance of maintaining
+                        biodiversity and cultural heritage. It emphasizes our responsibility as stewards of creation and
+                        knowledge.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">⚖️</span>
+                    <div class="significance-name">Dharmic Leadership</div>
+                    <div class="significance-description">
+                        King Satyavrata's transformation into Manu represents the ideal of righteous leadership. It
+                        teaches that true leaders are those who serve with compassion and are chosen by divine grace to
+                        guide humanity.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">🛡️</span>
+                    <div class="significance-name">Divine Protection</div>
+                    <div class="significance-description">
+                        Matsya's protection during the deluge symbolizes how divine grace shields devotees from the
+                        storms of life. It assures that those who surrender to the divine will always find refuge and
+                        guidance.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">🌟</span>
+                    <div class="significance-name">Evolutionary Symbolism</div>
+                    <div class="significance-description">
+                        As the first avatar, Matsya represents the beginning of evolution from aquatic life. It
+                        symbolizes the divine presence in all forms of life and the gradual evolution of consciousness
+                        toward spiritual realization.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced ocean background creation
+        function createOceanElements() {
+            const oceanBg = document.querySelector('.ocean-bg');
+
+            // Create fish particles
+            for (let i = 0; i < 12; i++) {
+                const fish = document.createElement('div');
+                fish.className = 'fish-particle';
+                fish.style.top = Math.random() * 100 + '%';
+                fish.style.animationDelay = Math.random() * 12 + 's';
+                fish.style.animationDuration = (Math.random() * 6 + 10) + 's';
+                oceanBg.appendChild(fish);
+            }
+
+            // Create water bubbles
+            for (let i = 0; i < 20; i++) {
+                const bubble = document.createElement('div');
+                bubble.className = 'water-bubble';
+                bubble.style.left = Math.random() * 100 + '%';
+                bubble.style.animationDelay = Math.random() * 8 + 's';
+                bubble.style.animationDuration = (Math.random() * 4 + 6) + 's';
+                oceanBg.appendChild(bubble);
+            }
+
+            // Create divine lights
+            for (let i = 0; i < 5; i++) {
+                const light = document.createElement('div');
+                light.className = 'divine-light';
+                light.style.animationDelay = Math.random() * 15 + 's';
+                oceanBg.appendChild(light);
+            }
+        }
+
+        // Enhanced interactions
+        document.addEventListener('DOMContentLoaded', function () {
+            createOceanElements();
+
+            // Sacred symbols interactions
+            const symbols = document.querySelectorAll('.symbol');
+            symbols.forEach(symbol => {
+                symbol.addEventListener('click', function () {
+                    symbol.style.animation = 'none';
+                    setTimeout(() => {
+                        symbol.style.animation = 'symbolFloat 4s ease-in-out infinite';
+                    }, 100);
+                });
+            });
+
+            // Story chapter interactions
+            const chapters = document.querySelectorAll('.story-chapter');
+            chapters.forEach(chapter => {
+                chapter.addEventListener('mouseenter', function () {
+                    const icon = chapter.querySelector('.chapter-icon');
+                    icon.style.transform = 'scale(1.2) rotate(360deg)';
+                    icon.style.transition = 'all 0.8s ease';
+                });
+
+                chapter.addEventListener('mouseleave', function () {
+                    const icon = chapter.querySelector('.chapter-icon');
+                    icon.style.transform = '';
+                });
+            });
+
+            // Verse card interactions
+            const verseCards = document.querySelectorAll('.verse-card');
+            verseCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    const visual = card.querySelector('.verse-visual');
+                    visual.style.animation = 'verseGlow 1s ease-in-out infinite';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    const visual = card.querySelector('.verse-visual');
+                    visual.style.animation = 'verseGlow 5s ease-in-out infinite';
+                });
+            });
+
+            // Significance card interactions
+            const significanceCards = document.querySelectorAll('.significance-card');
+            significanceCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    const icon = card.querySelector('.significance-icon');
+                    icon.style.transform = 'scale(1.3) rotateY(360deg)';
+                    icon.style.transition = 'all 0.6s ease';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    const icon = card.querySelector('.significance-icon');
+                    icon.style.transform = '';
+                });
+            });
+
+            // Smooth scrolling for better experience
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Add floating animation to elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all major sections
+            document.querySelectorAll('.story-chapter, .verse-card, .significance-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9712c89b923ea83c',t:'MTc1NTUzNDQ5OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+
+<div id="global-footer"></div>
+
+</body>
+
+</html>

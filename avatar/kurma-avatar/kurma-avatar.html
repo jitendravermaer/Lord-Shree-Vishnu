@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/om.png" type="image/x-icon">
+    <title>कूर्म अवतार - The Divine Tortoise Avatar | Second Incarnation of Lord Vishnu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+            background: radial-gradient(ellipse at center, #0d4f3c 0%, #1a5f4a 30%, #2d8659 70%, #40a368 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ocean Churning Background Animation */
+        .churning-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .cosmic-wave {
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(64, 163, 104, 0.15) 0%, rgba(45, 134, 89, 0.1) 40%, transparent 70%);
+            border-radius: 50%;
+            animation: cosmicChurn 30s infinite linear;
+        }
+
+        .cosmic-wave:nth-child(2) {
+            animation-delay: -15s;
+            animation-duration: 35s;
+        }
+
+        .tortoise-particle {
+            position: absolute;
+            width: 35px;
+            height: 25px;
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.8), rgba(64, 163, 104, 0.6));
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: tortoiseFloat 18s ease-in-out infinite;
+        }
+
+        .nectar-drop {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.9), rgba(255, 165, 0, 0.7));
+            border-radius: 50%;
+            animation: nectarFall 10s linear infinite;
+        }
+
+        .mandara-particle {
+            position: absolute;
+            width: 8px;
+            height: 40px;
+            background: linear-gradient(180deg, rgba(139, 69, 19, 0.8), rgba(160, 82, 45, 0.6));
+            border-radius: 4px;
+            animation: mandaraSway 12s ease-in-out infinite;
+        }
+
+        .divine-serpent {
+            position: absolute;
+            width: 200px;
+            height: 6px;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.8), rgba(255, 165, 0, 0.6), transparent);
+            border-radius: 3px;
+            animation: serpentMove 20s ease-in-out infinite;
+        }
+
+        @keyframes cosmicChurn {
+
+            0%,
+            100% {
+                transform: scale(0.8) rotate(0deg);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: scale(2.2) rotate(180deg);
+                opacity: 0.1;
+            }
+        }
+
+        @keyframes tortoiseFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.8;
+            }
+
+            25% {
+                transform: translateY(-60px) rotate(90deg);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(-120px) rotate(180deg);
+                opacity: 0.9;
+            }
+
+            75% {
+                transform: translateY(-60px) rotate(270deg);
+                opacity: 1;
+            }
+        }
+
+        @keyframes nectarFall {
+            0% {
+                transform: translateY(-100px) translateX(0px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) translateX(80px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes mandaraSway {
+
+            0%,
+            100% {
+                transform: translateX(0px) rotate(0deg);
+            }
+
+            25% {
+                transform: translateX(30px) rotate(5deg);
+            }
+
+            50% {
+                transform: translateX(0px) rotate(0deg);
+            }
+
+            75% {
+                transform: translateX(-30px) rotate(-5deg);
+            }
+        }
+
+        @keyframes serpentMove {
+
+            0%,
+            100% {
+                transform: translateX(-250px) translateY(30vh) rotate(0deg);
+            }
+
+            25% {
+                transform: translateX(calc(100vw + 250px)) translateY(50vh) rotate(10deg);
+            }
+
+            50% {
+                transform: translateX(calc(100vw + 250px)) translateY(70vh) rotate(0deg);
+            }
+
+            75% {
+                transform: translateX(-250px) translateY(90vh) rotate(-10deg);
+            }
+        }
+
+        .main-container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Divine Header */
+        .divine-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 80px 40px;
+            background: linear-gradient(135deg, rgba(64, 163, 104, 0.3), rgba(45, 134, 89, 0.25), rgba(255, 215, 0, 0.2));
+            border-radius: 30px;
+            border: 3px solid rgba(64, 163, 104, 0.6);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .divine-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(64, 163, 104, 0.2), transparent);
+            animation: rotate 28s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .divine-header .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .divine-header h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            background: linear-gradient(45deg, #40a368, #2d8659, #ffd700, #87ceeb);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+            text-shadow: 0 0 40px rgba(64, 163, 104, 0.8);
+            animation: gradientShift 8s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .divine-header .sanskrit {
+            font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+            color: #40a368;
+            margin-bottom: 20px;
+            font-family: 'Noto Sans Devanagari', serif;
+            text-shadow: 0 0 25px rgba(64, 163, 104, 0.8);
+        }
+
+        .divine-header .subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+            color: #87ceeb;
+            font-style: italic;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* Sacred Symbols */
+        .sacred-symbols {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .symbol {
+            font-size: 3.5rem;
+            animation: symbolChurn 5s ease-in-out infinite;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .symbol::after {
+            content: attr(title);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            color: #40a368;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .symbol:hover::after {
+            opacity: 1;
+        }
+
+        .symbol:hover {
+            transform: scale(1.3) rotate(360deg);
+            text-shadow: 0 0 40px currentColor;
+        }
+
+        @keyframes symbolChurn {
+
+            0%,
+            100% {
+                opacity: 0.8;
+                transform: rotateY(0deg) scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: rotateY(180deg) scale(1.1);
+            }
+        }
+
+        /* Story Section */
+        .story-section {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, rgba(64, 163, 104, 0.2), rgba(45, 134, 89, 0.15), rgba(255, 215, 0, 0.1));
+            border-radius: 30px;
+            border: 3px solid rgba(64, 163, 104, 0.5);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="tortoise" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><ellipse cx="15" cy="15" rx="10" ry="6" fill="rgba(64,163,104,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23tortoise)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .story-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #40a368;
+            margin-bottom: 60px;
+            font-family: 'Noto Sans Devanagari', serif;
+            position: relative;
+            z-index: 2;
+        }
+
+        .story-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .story-chapter {
+            background: linear-gradient(135deg, rgba(64, 163, 104, 0.25), rgba(45, 134, 89, 0.2), rgba(255, 215, 0, 0.15));
+            border: 3px solid rgba(64, 163, 104, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            margin-bottom: 40px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-chapter::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #40a368, #2d8659, #ffd700, #40a368);
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .story-chapter:hover::before {
+            opacity: 1;
+        }
+
+        .story-chapter:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(64, 163, 104, 0.4);
+        }
+
+        .chapter-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .chapter-icon {
+            font-size: 4rem;
+            min-width: 80px;
+            text-align: center;
+            animation: chapterGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes chapterGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px currentColor;
+            }
+
+            50% {
+                text-shadow: 0 0 40px currentColor, 0 0 60px currentColor;
+            }
+        }
+
+        .chapter-info h3 {
+            font-size: 1.8rem;
+            color: #40a368;
+            margin-bottom: 10px;
+        }
+
+        .chapter-info .sanskrit-title {
+            font-size: 1.1rem;
+            color: #ffd700;
+            font-family: 'Noto Sans Devanagari', serif;
+        }
+
+        .chapter-text {
+            font-size: 1.1rem;
+            color: #e6f3ff;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .chapter-significance {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 4px solid #40a368;
+            font-size: 1rem;
+            color: #b3d9ff;
+            line-height: 1.6;
+        }
+
+        /* Verses Section */
+        .verses-section {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, rgba(45, 134, 89, 0.2), rgba(64, 163, 104, 0.15), rgba(255, 215, 0, 0.1));
+            border-radius: 30px;
+            border: 3px solid rgba(45, 134, 89, 0.5);
+            backdrop-filter: blur(20px);
+        }
+
+        .verses-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #2d8659;
+            margin-bottom: 60px;
+            font-family: 'Noto Sans Devanagari', serif;
+        }
+
+        .verses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+        }
+
+        .verse-card {
+            background: linear-gradient(135deg, rgba(45, 134, 89, 0.25), rgba(64, 163, 104, 0.2), rgba(255, 215, 0, 0.15));
+            border: 3px solid rgba(45, 134, 89, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            transition: all 0.5s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .verse-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #2d8659, #40a368, #ffd700, #2d8659);
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .verse-card:hover::before {
+            opacity: 1;
+        }
+
+        .verse-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(45, 134, 89, 0.4);
+        }
+
+        .verse-visual {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 25px;
+            animation: verseGlow 5s ease-in-out infinite;
+        }
+
+        @keyframes verseGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px #2d8659;
+                transform: scale(1);
+            }
+
+            50% {
+                text-shadow: 0 0 40px #2d8659, 0 0 60px #40a368;
+                transform: scale(1.05);
+            }
+        }
+
+        .verse-content h3 {
+            font-size: 1.6rem;
+            color: #2d8659;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .verse-sanskrit {
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-family: 'Noto Sans Devanagari', serif;
+            text-align: center;
+            font-weight: bold;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            line-height: 1.8;
+        }
+
+        .verse-translation {
+            font-size: 1rem;
+            color: #e6f3ff;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .verse-meaning {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 4px solid #2d8659;
+            font-size: 0.95rem;
+            color: #b3d9ff;
+            line-height: 1.6;
+        }
+
+        /* Treasures Section */
+        .treasures-section {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(64, 163, 104, 0.15), rgba(45, 134, 89, 0.1));
+            border-radius: 30px;
+            border: 3px solid rgba(255, 215, 0, 0.5);
+            backdrop-filter: blur(20px);
+        }
+
+        .treasures-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #ffd700;
+            margin-bottom: 60px;
+            font-family: 'Noto Sans Devanagari', serif;
+        }
+
+        .treasures-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .treasure-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(64, 163, 104, 0.2), rgba(45, 134, 89, 0.15));
+            border: 3px solid rgba(255, 215, 0, 0.4);
+            border-radius: 25px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .treasure-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.15), transparent);
+            animation: rotate 10s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .treasure-card:hover::before {
+            opacity: 1;
+        }
+
+        .treasure-card:hover {
+            transform: scale(1.05);
+            border-color: #ffd700;
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.4);
+        }
+
+        .treasure-icon {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 20px;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .treasure-name {
+            font-size: 1.4rem;
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        .treasure-sanskrit {
+            font-size: 1rem;
+            color: #ffb347;
+            text-align: center;
+            margin-bottom: 15px;
+            font-family: 'Noto Sans Devanagari', serif;
+            position: relative;
+            z-index: 2;
+        }
+
+        .treasure-description {
+            font-size: 0.9rem;
+            color: #e6f3ff;
+            line-height: 1.6;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Significance Section */
+        .significance-section {
+            margin: 80px 0;
+            padding: 60px;
+            background: linear-gradient(135deg, rgba(64, 163, 104, 0.2), rgba(45, 134, 89, 0.15), rgba(255, 215, 0, 0.1));
+            border-radius: 30px;
+            border: 3px solid rgba(64, 163, 104, 0.5);
+            backdrop-filter: blur(20px);
+        }
+
+        .significance-title {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #40a368;
+            margin-bottom: 60px;
+            font-family: 'Noto Sans Devanagari', serif;
+        }
+
+        .significance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .significance-card {
+            background: linear-gradient(135deg, rgba(64, 163, 104, 0.25), rgba(45, 134, 89, 0.2), rgba(255, 215, 0, 0.15));
+            border: 3px solid rgba(64, 163, 104, 0.4);
+            border-radius: 25px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .significance-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(64, 163, 104, 0.15), transparent);
+            animation: rotate 15s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .significance-card:hover::before {
+            opacity: 1;
+        }
+
+        .significance-card:hover {
+            transform: scale(1.05);
+            border-color: #40a368;
+            box-shadow: 0 25px 50px rgba(64, 163, 104, 0.4);
+        }
+
+        .significance-icon {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 25px;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .significance-name {
+            font-size: 1.6rem;
+            color: #40a368;
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+
+        .significance-description {
+            font-size: 1rem;
+            color: #e6f3ff;
+            line-height: 1.7;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .verses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .treasures-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .significance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chapter-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .divine-header {
+                padding: 60px 20px;
+            }
+
+            .story-section,
+            .verses-section,
+            .treasures-section,
+            .significance-section {
+                padding: 40px 20px;
+            }
+
+            .sacred-symbols {
+                gap: 30px;
+            }
+
+            .symbol {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 10px;
+            }
+
+            .verse-sanskrit {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+
+<!-- Inject common assets loader (adds common.css & common.js dynamically) -->
+<script>
+(function(){
+  var marker = "/Lord Vishnu/";
+  var p = decodeURI(location.pathname);
+  var idx = p.indexOf(marker);
+  var root = idx >= 0 ? p.substring(0, idx + marker.length) : (document.baseURI || "/");
+  // Load common.css
+  var link = document.createElement('link'); link.rel='stylesheet'; link.href = root + 'common.css'; document.head.appendChild(link);
+  // Load common.js
+  var s = document.createElement('script'); s.src = root + 'common.js'; document.head.appendChild(s);
+})();
+</script>
+
+</head>
+
+<body>
+<div id="global-nav"></div>
+
+    <div class="churning-bg">
+        <div class="cosmic-wave"></div>
+        <div class="cosmic-wave"></div>
+    </div>
+
+    <div class="main-container">
+        <div class="divine-header">
+            <div class="content">
+                <div class="sanskrit">॥ ॐ नमो भगवते कूर्माय ॥</div>
+                <h1>Kurma Avatar - The Divine Tortoise</h1>
+                <div class="subtitle">Second Incarnation of Lord Vishnu • Support of Mount Mandara • Facilitator of
+                    Cosmic Churning</div>
+                <div class="sacred-symbols">
+                    <span class="symbol" title="Divine Tortoise">🐢</span>
+                    <span class="symbol" title="Mount Mandara">⛰️</span>
+                    <span class="symbol" title="Vasuki Serpent">🐍</span>
+                    <span class="symbol" title="Nectar of Immortality">🍯</span>
+                    <span class="symbol" title="Cosmic Ocean">🌊</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <h2 class="story-title">समुद्र मंथन की कथा (Story of Ocean Churning)</h2>
+            <div class="story-content">
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">⚡</div>
+                        <div class="chapter-info">
+                            <h3>The Curse of Sage Durvasa</h3>
+                            <div class="sanskrit-title">दुर्वासा ऋषि का श्राप</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        The cosmic drama began when Sage Durvasa, known for his fierce temperament, visited Indra's
+                        court. The sage offered a divine garland blessed by Goddess Lakshmi to Indra, the king of gods.
+                        However, Indra, in his pride and negligence, placed the sacred garland on his elephant Airavata,
+                        who trampled it underfoot. Enraged by this disrespect to the divine gift, Sage Durvasa cursed
+                        Indra and all the gods to lose their strength, prosperity, and immortality. As a result, the
+                        gods became weak and vulnerable, losing their divine radiance and power.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Moral Teaching:</strong> This episode teaches the importance of humility and respect for
+                        divine blessings. Pride and arrogance, even among the gods, lead to downfall and loss of divine
+                        grace.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">👹</div>
+                        <div class="chapter-info">
+                            <h3>The Demons Gain Power</h3>
+                            <div class="sanskrit-title">असुरों की शक्ति वृद्धि</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        Taking advantage of the gods' weakened state, the demons (asuras) led by powerful kings like
+                        Bali launched fierce attacks on the heavenly realms. The gods, stripped of their divine strength
+                        and immortality, were unable to defend themselves effectively. They were defeated in battle
+                        after battle and were eventually driven out of their celestial abodes. The demons took control
+                        of the three worlds, establishing their dominance and spreading chaos and adharma
+                        (unrighteousness) throughout the universe. The cosmic balance was severely disturbed, and dharma
+                        was in grave danger.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Cosmic Balance:</strong> This represents how the absence of divine grace and
+                        righteousness allows negative forces to dominate, emphasizing the need for divine intervention
+                        to restore cosmic order.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">🙏</div>
+                        <div class="chapter-info">
+                            <h3>Gods Seek Vishnu's Help</h3>
+                            <div class="sanskrit-title">देवों की विष्णु से प्रार्थना</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        In their desperate situation, the gods approached Lord Brahma for guidance, who then led them to
+                        Lord Vishnu, the supreme protector of the universe. Vishnu listened to their plight with
+                        compassion and devised a master plan. He suggested that the gods should churn the cosmic ocean
+                        (Kshira Sagara) to obtain Amrita, the nectar of immortality, which would restore their strength
+                        and make them invincible. However, this monumental task required the cooperation of the demons
+                        as well, since the gods alone lacked the strength to accomplish it. Vishnu advised them to form
+                        a temporary alliance with the demons, promising to share the nectar equally.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Divine Strategy:</strong> This shows how divine wisdom sometimes requires cooperation
+                        even with opposing forces to achieve a greater good, demonstrating the complexity of cosmic
+                        justice.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">🐢</div>
+                        <div class="chapter-info">
+                            <h3>Kurma Avatar Manifests</h3>
+                            <div class="sanskrit-title">कूर्म अवतार का प्राकट्य</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        To facilitate the churning of the cosmic ocean, Mount Mandara was chosen as the churning rod and
+                        the great serpent Vasuki as the rope. However, when the churning began, Mount Mandara started
+                        sinking into the ocean due to its enormous weight and the lack of a stable foundation. Seeing
+                        this crisis, Lord Vishnu immediately incarnated as Kurma, a gigantic divine tortoise. The
+                        magnificent tortoise, with its diamond-hard shell gleaming like a thousand suns, positioned
+                        itself at the bottom of the ocean and supported Mount Mandara on its back. This divine form was
+                        so vast that it could easily bear the weight of the cosmic mountain and remain stable during the
+                        intense churning process.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Divine Support:</strong> Kurma represents the divine foundation that supports all cosmic
+                        activities. The tortoise symbolizes patience, stability, and the willingness to bear great
+                        burdens for the welfare of all beings.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">🌊</div>
+                        <div class="chapter-info">
+                            <h3>The Great Churning Process</h3>
+                            <div class="sanskrit-title">महान मंथन प्रक्रिया</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        With Kurma providing the stable foundation, the gods and demons began the monumental task of
+                        churning the cosmic ocean. The gods held the tail of Vasuki while the demons held the head. As
+                        they pulled the serpent back and forth, Mount Mandara rotated, churning the ocean with
+                        tremendous force. The churning continued for thousands of years, creating massive waves and
+                        cosmic disturbances. From Vasuki's mouth came forth poisonous fumes and fire, which weakened the
+                        demons holding his head, while the gods at the tail remained protected. Throughout this process,
+                        Kurma remained steadfast, providing unwavering support and ensuring the success of the cosmic
+                        endeavor.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Cosmic Cooperation:</strong> The churning process represents the universal principle
+                        that great achievements require sustained effort, cooperation, and divine support, even when the
+                        task seems impossible.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">🎁</div>
+                        <div class="chapter-info">
+                            <h3>Emergence of Divine Treasures</h3>
+                            <div class="sanskrit-title">दिव्य रत्नों का प्राकट्य</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        As the churning progressed, fourteen precious treasures (ratnas) emerged from the cosmic ocean.
+                        These included Goddess Lakshmi (wealth and prosperity), Kaustubha gem, Parijata tree, Airavata
+                        elephant, Kamadhenu cow, Apsaras (celestial nymphs), Varuni (goddess of wine), and others. Each
+                        treasure was distributed among the gods and demons according to their nature and preferences.
+                        However, when the deadly poison Halahala emerged, threatening to destroy the entire universe,
+                        Lord Shiva compassionately consumed it to save all creation, earning the name Neelakantha
+                        (blue-throated). Finally, Dhanvantari, the divine physician, appeared carrying the pot of
+                        Amrita, the ultimate goal of the churning.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Divine Abundance:</strong> The emergence of treasures represents how sustained spiritual
+                        effort and divine grace bring forth abundance, wisdom, and ultimately, the nectar of immortality
+                        - spiritual realization.
+                    </div>
+                </div>
+
+                <div class="story-chapter">
+                    <div class="chapter-header">
+                        <div class="chapter-icon">🍯</div>
+                        <div class="chapter-info">
+                            <h3>The Nectar Distribution</h3>
+                            <div class="sanskrit-title">अमृत वितरण</div>
+                        </div>
+                    </div>
+                    <div class="chapter-text">
+                        When Dhanvantari appeared with the pot of Amrita, both gods and demons rushed to claim it,
+                        breaking their agreement to share equally. The demons, being more powerful at that moment,
+                        snatched the pot and began to fight among themselves. Seeing this chaos and the potential for
+                        the demons to become immortal and invincible, Lord Vishnu manifested as Mohini, an enchanting
+                        female form. Through her divine beauty and clever distribution, Mohini ensured that only the
+                        gods received the nectar while the demons were left empty-handed. However, the demon Rahu
+                        disguised himself as a god and managed to drink some nectar, but was beheaded by Vishnu's discus
+                        before the nectar could reach his body, creating the celestial entities Rahu and Ketu.
+                    </div>
+                    <div class="chapter-significance">
+                        <strong>Divine Justice:</strong> This episode demonstrates how divine wisdom ensures that
+                        immortality and power are granted only to those who uphold dharma, while preventing their misuse
+                        by forces of darkness.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="verses-section">
+            <h2 class="verses-title">पवित्र श्लोक (Sacred Verses)</h2>
+            <div class="verses-grid">
+                <div class="verse-card">
+                    <div class="verse-visual">🕉️</div>
+                    <div class="verse-content">
+                        <h3>Kurma Gayatri Mantra</h3>
+                        <div class="verse-sanskrit">
+                            ॐ कूर्मरूपाय विद्महे<br>
+                            भूधराय धीमहि<br>
+                            तन्नो कूर्मः प्रचोदयात्॥
+                        </div>
+                        <div class="verse-translation">
+                            "Om, let us meditate on the tortoise-formed Lord,<br>
+                            Let us contemplate the supporter of the earth,<br>
+                            May that Kurma inspire and guide us."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Spiritual Meaning:</strong> This Gayatri mantra invokes Kurma Avatar as the divine
+                            supporter and foundation. It seeks blessings for stability, patience, and the strength to
+                            support others in their spiritual journey.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">🐢</div>
+                    <div class="verse-content">
+                        <h3>Bhagavata Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            क्षीरोदमथने कूर्मो<br>
+                            दध्रे गिरिवरं प्रभुः<br>
+                            यत्पृष्ठे सो अचलेन्द्रो यत्<br>
+                            चक्रे चक्रं सुदुष्करम्॥
+                        </div>
+                        <div class="verse-translation">
+                            "During the churning of the milk ocean,<br>
+                            The Lord as Kurma supported the great mountain,<br>
+                            On whose back that king of mountains<br>
+                            Performed the most difficult task of churning."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Divine Foundation:</strong> This verse celebrates Kurma as the divine foundation
+                            that made the impossible task of ocean churning possible, representing how divine support
+                            enables the achievement of seemingly impossible goals.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">⛰️</div>
+                    <div class="verse-content">
+                        <h3>Vishnu Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            मन्दरं पर्वतं कृत्वा<br>
+                            नेत्रं कूर्मो महाबलः<br>
+                            दधार पृष्ठतो देवो<br>
+                            मथनार्थं सुरासुरैः॥
+                        </div>
+                        <div class="verse-translation">
+                            "Making Mount Mandara the churning rod,<br>
+                            The mighty Kurma, the divine Lord,<br>
+                            Supported it on His back<br>
+                            For churning by gods and demons."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Divine Sacrifice:</strong> This verse highlights the selfless service of Kurma, who
+                            bore the immense weight and strain of the churning process, demonstrating divine compassion
+                            and sacrifice for universal welfare.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">🌊</div>
+                    <div class="verse-content">
+                        <h3>Matsya Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            समुद्रमथने यस्मिन्<br>
+                            कूर्मरूपेण केशवः<br>
+                            अधारभूतो अभवत्<br>
+                            तस्मै कूर्माय ते नमः॥
+                        </div>
+                        <div class="verse-translation">
+                            "During the ocean churning, when<br>
+                            Keshava in the form of Kurma<br>
+                            Became the foundation and support,<br>
+                            Salutations to that Kurma."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Foundation of Dharma:</strong> This verse honors Kurma as the fundamental support
+                            system, representing how divine principles provide the stable foundation upon which all
+                            righteous activities can be built.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">💎</div>
+                    <div class="verse-content">
+                        <h3>Padma Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            अमृतार्थं समुद्रस्य<br>
+                            मथने सुमहाबले<br>
+                            आधारो यो बभूवाथ<br>
+                            कूर्मरूपी जनार्दनः॥
+                        </div>
+                        <div class="verse-translation">
+                            "For the sake of nectar, in the churning<br>
+                            Of the ocean by the mighty ones,<br>
+                            He who became the support<br>
+                            Was Janardhana in Kurma form."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Divine Purpose:</strong> This verse emphasizes that Kurma's manifestation had the
+                            ultimate purpose of obtaining Amrita (immortality), symbolizing how divine interventions
+                            always aim at the highest spiritual welfare of all beings.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verse-card">
+                    <div class="verse-visual">🙏</div>
+                    <div class="verse-content">
+                        <h3>Agni Purana Verse</h3>
+                        <div class="verse-sanskrit">
+                            धन्वन्तरिर्जगत्स्वामी<br>
+                            कूर्मावतारसंभवः<br>
+                            अमृतं लेभिरे देवाः<br>
+                            कूर्मस्य करुणातः॥
+                        </div>
+                        <div class="verse-translation">
+                            "Dhanvantari, the lord of the world,<br>
+                            Born from the Kurma avatar's effort,<br>
+                            The gods obtained nectar<br>
+                            Through Kurma's compassion."
+                        </div>
+                        <div class="verse-meaning">
+                            <strong>Compassionate Grace:</strong> This verse connects the emergence of Dhanvantari and
+                            Amrita to Kurma's compassionate support, showing how divine grace manifests healing and
+                            immortality for the welfare of all beings.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="treasures-section">
+            <h2 class="treasures-title">चतुर्दश रत्न (Fourteen Divine Treasures)</h2>
+            <div class="treasures-grid">
+                <div class="treasure-card">
+                    <span class="treasure-icon">💰</span>
+                    <div class="treasure-name">Goddess Lakshmi</div>
+                    <div class="treasure-sanskrit">श्री लक्ष्मी</div>
+                    <div class="treasure-description">The goddess of wealth, prosperity, and abundance who chose Lord
+                        Vishnu as her eternal consort, bringing divine prosperity to the universe.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">💎</span>
+                    <div class="treasure-name">Kaustubha Gem</div>
+                    <div class="treasure-sanskrit">कौस्तुभ मणि</div>
+                    <div class="treasure-description">The divine jewel that adorns Lord Vishnu's chest, symbolizing pure
+                        consciousness and the seat of all divine qualities.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🌳</span>
+                    <div class="treasure-name">Parijata Tree</div>
+                    <div class="treasure-sanskrit">पारिजात वृक्ष</div>
+                    <div class="treasure-description">The celestial wish-fulfilling tree that grants all desires and
+                        fills the heavens with divine fragrance through its eternal blossoms.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🐘</span>
+                    <div class="treasure-name">Airavata Elephant</div>
+                    <div class="treasure-sanskrit">ऐरावत हाथी</div>
+                    <div class="treasure-description">The magnificent white elephant with four tusks who became Indra's
+                        divine mount, symbolizing royal power and divine authority.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🐄</span>
+                    <div class="treasure-name">Kamadhenu Cow</div>
+                    <div class="treasure-sanskrit">कामधेनु गाय</div>
+                    <div class="treasure-description">The divine cow that fulfills all wishes and provides endless
+                        abundance, representing the nurturing aspect of divine grace.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🧚‍♀️</span>
+                    <div class="treasure-name">Apsaras</div>
+                    <div class="treasure-sanskrit">अप्सराएं</div>
+                    <div class="treasure-description">The celestial nymphs of extraordinary beauty and grace who dance
+                        in the heavenly courts and inspire divine arts and culture.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🍷</span>
+                    <div class="treasure-name">Varuni</div>
+                    <div class="treasure-sanskrit">वारुणी</div>
+                    <div class="treasure-description">The goddess of wine and intoxication who represents the divine
+                        bliss and ecstasy that comes from spiritual realization.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🌙</span>
+                    <div class="treasure-name">Chandra Moon</div>
+                    <div class="treasure-sanskrit">चन्द्र</div>
+                    <div class="treasure-description">The divine moon that adorns Lord Shiva's head, representing the
+                        cooling, soothing, and nourishing aspects of divine energy.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🐚</span>
+                    <div class="treasure-name">Panchajanya Conch</div>
+                    <div class="treasure-sanskrit">पाञ्चजन्य शंख</div>
+                    <div class="treasure-description">The divine conch shell of Lord Vishnu whose sound announces
+                        victory of dharma and dispels all negative energies from the universe.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🏹</span>
+                    <div class="treasure-name">Sharanga Bow</div>
+                    <div class="treasure-sanskrit">शारंग धनुष</div>
+                    <div class="treasure-description">The mighty bow of Lord Vishnu that never misses its target,
+                        representing divine justice and the power to destroy evil forces.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">⚔️</span>
+                    <div class="treasure-name">Nandaka Sword</div>
+                    <div class="treasure-sanskrit">नन्दक खड्ग</div>
+                    <div class="treasure-description">The divine sword that cuts through ignorance and illusion,
+                        representing the sharp discrimination between truth and falsehood.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🌿</span>
+                    <div class="treasure-name">Sanjeevani Herbs</div>
+                    <div class="treasure-sanskrit">संजीवनी औषधि</div>
+                    <div class="treasure-description">The life-giving medicinal herbs that can cure any disease and even
+                        bring the dead back to life, representing divine healing power.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">👨‍⚕️</span>
+                    <div class="treasure-name">Dhanvantari</div>
+                    <div class="treasure-sanskrit">धन्वन्तरि</div>
+                    <div class="treasure-description">The divine physician who emerged carrying the pot of Amrita,
+                        representing the ultimate healing power and medical knowledge.</div>
+                </div>
+
+                <div class="treasure-card">
+                    <span class="treasure-icon">🍯</span>
+                    <div class="treasure-name">Amrita Nectar</div>
+                    <div class="treasure-sanskrit">अमृत</div>
+                    <div class="treasure-description">The nectar of immortality that grants eternal life and divine
+                        consciousness, representing the ultimate spiritual realization and liberation.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="significance-section">
+            <h2 class="significance-title">आध्यात्मिक महत्व (Spiritual Significance)</h2>
+            <div class="significance-grid">
+                <div class="significance-card">
+                    <span class="significance-icon">🛡️</span>
+                    <div class="significance-name">Divine Foundation</div>
+                    <div class="significance-description">
+                        Kurma represents the stable foundation required for all spiritual endeavors. Just as the
+                        tortoise supported Mount Mandara, divine grace provides the unwavering support needed for
+                        spiritual transformation and the churning of consciousness.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">⚖️</span>
+                    <div class="significance-name">Patience & Perseverance</div>
+                    <div class="significance-description">
+                        The tortoise symbolizes patience, endurance, and the ability to remain calm under pressure.
+                        Kurma teaches that great achievements require sustained effort and the patience to support
+                        others through difficult processes.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">🤝</span>
+                    <div class="significance-name">Cosmic Cooperation</div>
+                    <div class="significance-description">
+                        The churning required cooperation between gods and demons, teaching that sometimes opposing
+                        forces must work together for a greater purpose. This represents the integration of all aspects
+                        of existence in spiritual evolution.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">🎯</span>
+                    <div class="significance-name">Focused Effort</div>
+                    <div class="significance-description">
+                        The sustained churning for thousands of years represents the focused, continuous effort required
+                        in spiritual practice. Like the ocean churning, spiritual transformation requires persistent
+                        dedication and divine support.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">💎</span>
+                    <div class="significance-name">Hidden Treasures</div>
+                    <div class="significance-description">
+                        The fourteen treasures emerging from the ocean represent the divine qualities and powers that
+                        manifest through sustained spiritual practice. Each treasure symbolizes different aspects of
+                        spiritual attainment and divine grace.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">☠️</span>
+                    <div class="significance-name">Overcoming Poison</div>
+                    <div class="significance-description">
+                        The emergence of deadly poison before nectar teaches that spiritual journey involves facing and
+                        overcoming negative tendencies and obstacles. Divine grace helps transform poison into medicine
+                        through proper understanding.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">🏆</span>
+                    <div class="significance-name">Divine Justice</div>
+                    <div class="significance-description">
+                        The ultimate distribution of nectar only to the gods represents how divine wisdom ensures that
+                        spiritual powers and immortality are granted only to those who uphold dharma and righteousness.
+                    </div>
+                </div>
+
+                <div class="significance-card">
+                    <span class="significance-icon">🌟</span>
+                    <div class="significance-name">Selfless Service</div>
+                    <div class="significance-description">
+                        Kurma's willingness to bear the enormous burden without seeking recognition represents the ideal
+                        of selfless service. True spiritual progress comes through supporting others' growth and welfare
+                        without expectation of reward.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced churning background creation
+        function createChurningElements() {
+            const churningBg = document.querySelector('.churning-bg');
+
+            // Create tortoise particles
+            for (let i = 0; i < 10; i++) {
+                const tortoise = document.createElement('div');
+                tortoise.className = 'tortoise-particle';
+                tortoise.style.left = Math.random() * 100 + '%';
+                tortoise.style.top = Math.random() * 100 + '%';
+                tortoise.style.animationDelay = Math.random() * 18 + 's';
+                tortoise.style.animationDuration = (Math.random() * 8 + 15) + 's';
+                churningBg.appendChild(tortoise);
+            }
+
+            // Create nectar drops
+            for (let i = 0; i < 20; i++) {
+                const nectar = document.createElement('div');
+                nectar.className = 'nectar-drop';
+                nectar.style.left = Math.random() * 100 + '%';
+                nectar.style.animationDelay = Math.random() * 10 + 's';
+                nectar.style.animationDuration = (Math.random() * 4 + 8) + 's';
+                churningBg.appendChild(nectar);
+            }
+
+            // Create mandara particles
+            for (let i = 0; i < 15; i++) {
+                const mandara = document.createElement('div');
+                mandara.className = 'mandara-particle';
+                mandara.style.left = Math.random() * 100 + '%';
+                mandara.style.top = Math.random() * 100 + '%';
+                mandara.style.animationDelay = Math.random() * 12 + 's';
+                churningBg.appendChild(mandara);
+            }
+
+            // Create divine serpents
+            for (let i = 0; i < 4; i++) {
+                const serpent = document.createElement('div');
+                serpent.className = 'divine-serpent';
+                serpent.style.animationDelay = Math.random() * 20 + 's';
+                churningBg.appendChild(serpent);
+            }
+        }
+
+        // Enhanced interactions
+        document.addEventListener('DOMContentLoaded', function () {
+            createChurningElements();
+
+            // Sacred symbols interactions
+            const symbols = document.querySelectorAll('.symbol');
+            symbols.forEach(symbol => {
+                symbol.addEventListener('click', function () {
+                    symbol.style.animation = 'none';
+                    setTimeout(() => {
+                        symbol.style.animation = 'symbolChurn 5s ease-in-out infinite';
+                    }, 100);
+                });
+            });
+
+            // Story chapter interactions
+            const chapters = document.querySelectorAll('.story-chapter');
+            chapters.forEach(chapter => {
+                chapter.addEventListener('mouseenter', function () {
+                    const icon = chapter.querySelector('.chapter-icon');
+                    icon.style.transform = 'scale(1.2) rotate(360deg)';
+                    icon.style.transition = 'all 0.8s ease';
+                });
+
+                chapter.addEventListener('mouseleave', function () {
+                    const icon = chapter.querySelector('.chapter-icon');
+                    icon.style.transform = '';
+                });
+            });
+
+            // Verse card interactions
+            const verseCards = document.querySelectorAll('.verse-card');
+            verseCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    const visual = card.querySelector('.verse-visual');
+                    visual.style.animation = 'verseGlow 1s ease-in-out infinite';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    const visual = card.querySelector('.verse-visual');
+                    visual.style.animation = 'verseGlow 5s ease-in-out infinite';
+                });
+            });
+
+            // Treasure card interactions
+            const treasureCards = document.querySelectorAll('.treasure-card');
+            treasureCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    const icon = card.querySelector('.treasure-icon');
+                    icon.style.transform = 'scale(1.3) rotateY(360deg)';
+                    icon.style.transition = 'all 0.6s ease';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    const icon = card.querySelector('.treasure-icon');
+                    icon.style.transform = '';
+                });
+            });
+
+            // Significance card interactions
+            const significanceCards = document.querySelectorAll('.significance-card');
+            significanceCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    const icon = card.querySelector('.significance-icon');
+                    icon.style.transform = 'scale(1.3) rotateY(360deg)';
+                    icon.style.transition = 'all 0.6s ease';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    const icon = card.querySelector('.significance-icon');
+                    icon.style.transform = '';
+                });
+            });
+
+            // Add floating animation to elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all major sections
+            document.querySelectorAll('.story-chapter, .verse-card, .treasure-card, .significance-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+
+            // Smooth scrolling for better experience
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9712d7530204a798',t:'MTc1NTUzNTEwMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+
+<div id="global-footer"></div>
+
+</body>
+
+</html>

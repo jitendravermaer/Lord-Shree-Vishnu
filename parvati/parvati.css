@@ -1,0 +1,1156 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Philosopher:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+    background: radial-gradient(ellipse at center, #4a0e4e 0%, #8b0000 30%, #ff4500 70%, #ffd700 100%);
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Enhanced Divine Background */
+.divine-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.shakti-wave {
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    background: radial-gradient(circle, rgba(255, 20, 147, 0.15) 0%, rgba(138, 43, 226, 0.1) 40%, transparent 70%);
+    border-radius: 50%;
+    animation: shaktiPulse 25s infinite;
+}
+
+.trishul-particle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(45deg, rgba(255, 215, 0, 0.8), rgba(255, 69, 0, 0.6));
+    clip-path: polygon(50% 0%, 40% 35%, 60% 35%);
+    animation: trishulFloat 15s ease-in-out infinite;
+}
+
+.lotus-energy {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle, rgba(255, 192, 203, 0.9), rgba(255, 20, 147, 0.7));
+    border-radius: 50% 10px 50% 10px;
+    animation: lotusEnergy 10s linear infinite;
+}
+
+.divine-light {
+    position: absolute;
+    width: 200px;
+    height: 6px;
+    background: linear-gradient(90deg, transparent, rgba(255, 20, 147, 0.8), transparent);
+    border-radius: 3px;
+    animation: divineMove 18s ease-in-out infinite;
+}
+
+@keyframes shaktiPulse {
+
+    0%,
+    100% {
+        transform: scale(0.8) rotate(0deg);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(2.5) rotate(180deg);
+        opacity: 0.1;
+    }
+}
+
+@keyframes trishulFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    25% {
+        transform: translateY(-80px) rotate(90deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-160px) rotate(180deg);
+        opacity: 0.9;
+    }
+
+    75% {
+        transform: translateY(-80px) rotate(270deg);
+        opacity: 1;
+    }
+}
+
+@keyframes lotusEnergy {
+    0% {
+        transform: translateY(-100px) translateX(0px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) translateX(100px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes divineMove {
+
+    0%,
+    100% {
+        transform: translateX(-250px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateX(calc(100vw + 250px)) rotate(90deg);
+    }
+
+    50% {
+        transform: translateX(calc(100vw + 250px)) rotate(180deg);
+    }
+
+    75% {
+        transform: translateX(-250px) rotate(270deg);
+    }
+}
+
+.main-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Divine Header */
+.divine-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.3), rgba(138, 43, 226, 0.25), rgba(255, 69, 0, 0.2));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 20, 147, 0.6);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.divine-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 20, 147, 0.2), transparent);
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.divine-header .content {
+    position: relative;
+    z-index: 2;
+}
+
+.divine-header h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(45deg, #ff1493, #8a2be2, #ff4500, #ffd700);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+    text-shadow: 0 0 40px rgba(255, 20, 147, 0.8);
+    animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.divine-header .sanskrit {
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    color: #ff1493;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 25px rgba(255, 20, 147, 0.8);
+}
+
+.divine-header .subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    color: #dda0dd;
+    font-style: italic;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Sacred Symbols */
+.sacred-symbols {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.symbol {
+    font-size: 3.5rem;
+    animation: symbolPulse 5s ease-in-out infinite;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.symbol::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #ff1493;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.symbol:hover::after {
+    opacity: 1;
+}
+
+.symbol:hover {
+    transform: scale(1.4) rotate(360deg);
+    text-shadow: 0 0 40px currentColor;
+}
+
+@keyframes symbolPulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+/* Divine Forms Section */
+.forms-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.2), rgba(138, 43, 226, 0.15), rgba(255, 69, 0, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 20, 147, 0.5);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.forms-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="trishul" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><polygon points="15,5 12,15 18,15" fill="rgba(255,20,147,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23trishul)"/></svg>');
+    opacity: 0.3;
+}
+
+.forms-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #ff1493;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    position: relative;
+    z-index: 2;
+}
+
+.forms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.form-card {
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.25), rgba(138, 43, 226, 0.2), rgba(255, 69, 0, 0.15));
+    border: 3px solid rgba(255, 20, 147, 0.5);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff1493, #8a2be2, #ff4500, #ff1493);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.form-card:hover::before {
+    opacity: 1;
+}
+
+.form-card:hover {
+    transform: translateY(-15px) rotateY(10deg);
+    box-shadow: 0 30px 60px rgba(255, 20, 147, 0.4);
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.form-visual {
+    font-size: 5rem;
+    min-width: 100px;
+    text-align: center;
+    animation: formGlow 5s ease-in-out infinite;
+}
+
+@keyframes formGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px currentColor;
+    }
+
+    50% {
+        text-shadow: 0 0 40px currentColor, 0 0 60px currentColor;
+    }
+}
+
+.form-info h3 {
+    font-size: 1.8rem;
+    color: #ff1493;
+    margin-bottom: 10px;
+}
+
+.form-info .sanskrit-name {
+    font-size: 1.1rem;
+    color: #ff8c00;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.form-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.form-powers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.power-tag {
+    background: linear-gradient(45deg, #ff1493, #8a2be2);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.form-blessings {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 4px solid #ff1493;
+    font-size: 0.9rem;
+    color: #e6e6fa;
+    line-height: 1.6;
+}
+
+/* Divine Attributes Section */
+.attributes-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(255, 20, 147, 0.15), rgba(255, 69, 0, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(138, 43, 226, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.attributes-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #8a2be2;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.attributes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.attribute-card {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.25), rgba(255, 20, 147, 0.2), rgba(255, 69, 0, 0.15));
+    border: 3px solid rgba(138, 43, 226, 0.4);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.attribute-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(138, 43, 226, 0.15), transparent);
+    animation: rotate 15s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.attribute-card:hover::before {
+    opacity: 1;
+}
+
+.attribute-card:hover {
+    transform: scale(1.05);
+    border-color: #8a2be2;
+    box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4);
+}
+
+.attribute-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 25px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.attribute-name {
+    font-size: 1.8rem;
+    color: #8a2be2;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.attribute-sanskrit {
+    font-size: 1.2rem;
+    color: #ff8c00;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Noto Sans Devanagari', serif;
+    position: relative;
+    z-index: 2;
+}
+
+.attribute-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.attribute-benefits {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #8a2be2;
+    position: relative;
+    z-index: 2;
+}
+
+.benefit-list {
+    font-size: 0.9rem;
+    color: #dda0dd;
+    line-height: 1.6;
+}
+
+/* Sacred Mantras Section */
+.mantras-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(255, 20, 147, 0.15), rgba(138, 43, 226, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 69, 0, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.mantras-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #ff4500;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.mantras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.mantra-card {
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.25), rgba(255, 20, 147, 0.2), rgba(138, 43, 226, 0.15));
+    border: 3px solid rgba(255, 69, 0, 0.4);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.mantra-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff4500, #ff1493, #8a2be2, #ff4500);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.mantra-card:hover::before {
+    opacity: 1;
+}
+
+.mantra-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(255, 69, 0, 0.4);
+}
+
+.mantra-visual {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: mantraGlow 4s ease-in-out infinite;
+}
+
+@keyframes mantraGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px #ff4500;
+        transform: scale(1);
+    }
+
+    50% {
+        text-shadow: 0 0 40px #ff4500, 0 0 60px #ff1493;
+        transform: scale(1.1);
+    }
+}
+
+.mantra-content h3 {
+    font-size: 1.8rem;
+    color: #ff4500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.mantra-text {
+    font-size: 1.3rem;
+    color: #ff1493;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 20, 147, 0.3);
+}
+
+.mantra-meaning {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mantra-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.benefit-tag {
+    background: linear-gradient(45deg, #ff4500, #ff1493);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Sacred Festivals Section */
+.festivals-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.2), rgba(138, 43, 226, 0.15), rgba(255, 69, 0, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 20, 147, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.festivals-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #ff1493;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.festivals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.festival-card {
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.25), rgba(138, 43, 226, 0.2), rgba(255, 69, 0, 0.15));
+    border: 3px solid rgba(255, 20, 147, 0.4);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.festival-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff1493, #8a2be2, #ff4500, #ff1493);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.festival-card:hover::before {
+    opacity: 1;
+}
+
+.festival-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(255, 20, 147, 0.4);
+}
+
+.festival-visual {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: festivalGlow 5s ease-in-out infinite;
+}
+
+@keyframes festivalGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px #ff1493;
+        transform: scale(1);
+    }
+
+    50% {
+        text-shadow: 0 0 40px #ff1493, 0 0 60px #8a2be2;
+        transform: scale(1.05);
+    }
+}
+
+.festival-content h3 {
+    font-size: 1.8rem;
+    color: #ff1493;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.festival-content .sanskrit-name {
+    font-size: 1.1rem;
+    color: #ff8c00;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-align: center;
+}
+
+.festival-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.festival-rituals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.ritual-tag {
+    background: linear-gradient(45deg, #ff1493, #8a2be2);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.festival-significance {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 4px solid #ff1493;
+    font-size: 0.9rem;
+    color: #e6e6fa;
+    line-height: 1.6;
+}
+
+/* Sacred Places Section */
+.places-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(255, 20, 147, 0.15), rgba(255, 69, 0, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(138, 43, 226, 0.5);
+    backdrop-filter: blur(20px);
+}
+
+.places-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #8a2be2;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.place-card {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.25), rgba(255, 20, 147, 0.2), rgba(255, 69, 0, 0.15));
+    border: 3px solid rgba(138, 43, 226, 0.4);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.place-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(138, 43, 226, 0.15), transparent);
+    animation: rotate 18s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.place-card:hover::before {
+    opacity: 1;
+}
+
+.place-card:hover {
+    transform: scale(1.05);
+    border-color: #8a2be2;
+    box-shadow: 0 25px 50px rgba(138, 43, 226, 0.4);
+}
+
+.place-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 25px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.place-name {
+    font-size: 1.8rem;
+    color: #8a2be2;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.place-sanskrit {
+    font-size: 1.2rem;
+    color: #ff8c00;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Noto Sans Devanagari', serif;
+    position: relative;
+    z-index: 2;
+}
+
+.place-description {
+    font-size: 1rem;
+    color: #e6e6fa;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.place-significance {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #8a2be2;
+    position: relative;
+    z-index: 2;
+}
+
+.significance-title {
+    font-size: 0.9rem;
+    color: #ff8c00;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.significance-text {
+    font-size: 0.9rem;
+    color: #dda0dd;
+    line-height: 1.6;
+}
+
+/* Image Gallery */
+.image-gallery {
+    margin: 80px 0;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #ff1493;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, #ff1493, #8a2be2, #ff4500, #ffd700);
+    background-size: 400% 400%;
+    border-radius: 20px;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: gradientMove 15s ease-in-out infinite;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.gallery-item:hover::before {
+    left: 100%;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 20px 40px rgba(255, 20, 147, 0.4);
+    border-color: #ff1493;
+}
+
+@keyframes gradientMove {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.gallery-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    z-index: 1;
+}
+
+.gallery-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.gallery-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(255, 20, 147, 0.3), rgba(138, 43, 226, 0.25), rgba(255, 69, 0, 0.2));
+    border: 3px solid rgba(255, 20, 147, 0.6);
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+    backdrop-filter: blur(20px);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #ff1493;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #8a2be2;
+    transform: scale(1.2);
+}
+
+.showcase-image {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    background: linear-gradient(135deg, #ff1493, #8a2be2, #ff4500, #ffd700);
+    background-size: 400% 400%;
+    border-radius: 20px;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    animation: gradientMove 10s ease-in-out infinite;
+}
+
+.showcase-title {
+    font-size: 2.5rem;
+    color: #ff1493;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.showcase-description {
+    font-size: 1.2rem;
+    color: #e6e6fa;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.showcase-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.showcase-tag {
+    background: linear-gradient(45deg, #ff1493, #8a2be2, #ff4500);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .forms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .attributes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mantras-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .festivals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .places-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .divine-header {
+        padding: 60px 20px;
+    }
+
+    .forms-section,
+    .attributes-section,
+    .mantras-section,
+    .festivals-section,
+    .places-section {
+        padding: 40px 20px;
+    }
+
+    .sacred-symbols {
+        gap: 30px;
+    }
+
+    .symbol {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .showcase-title {
+        font-size: 2rem;
+    }
+}

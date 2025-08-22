@@ -1,0 +1,794 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Noto+Serif:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+    background: linear-gradient(135deg, #0d47a1 0%, #1565c0 15%, #1976d2 30%, #1e88e5 45%, #2196f3 60%, #42a5f5 75%, #64b5f6 90%, #90caf9 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Cosmic Background Animation */
+.cosmic-aura {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.cosmic-wave {
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(13, 71, 161, 0.15) 0%, rgba(25, 101, 192, 0.1) 40%, transparent 70%);
+    border-radius: 50%;
+    animation: cosmicFlow 30s infinite linear;
+}
+
+.cosmic-wave:nth-child(2) {
+    animation-delay: -15s;
+    animation-duration: 35s;
+}
+
+.lightning-bolt {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(255, 193, 7, 0.8));
+    clip-path: polygon(20% 0%, 40% 20%, 30% 20%, 70% 100%, 50% 80%, 60% 80%);
+    animation: lightningStrike 12s ease-in-out infinite;
+}
+
+.divine-sword {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(13, 71, 161, 0.7));
+    clip-path: polygon(50% 0%, 60% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 40% 35%);
+    animation: swordFloat 18s linear infinite;
+}
+
+.prophecy-star {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 193, 7, 0.6));
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: prophecyShine 10s linear infinite;
+}
+
+.dharma-flame {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(45deg, rgba(255, 87, 34, 0.9), rgba(255, 193, 7, 0.7));
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flameRise 15s linear infinite;
+}
+
+@keyframes cosmicFlow {
+
+    0%,
+    100% {
+        transform: scale(0.8) rotate(0deg);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(2) rotate(180deg);
+        opacity: 0.15;
+    }
+}
+
+@keyframes lightningStrike {
+
+    0%,
+    100% {
+        transform: translateX(-100px) translateY(0px) rotate(0deg) scale(0.5);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(200px) translateY(-150px) rotate(45deg) scale(1.2);
+        opacity: 1;
+    }
+
+    40% {
+        transform: translateX(500px) translateY(-300px) rotate(90deg) scale(1.5);
+        opacity: 0.8;
+    }
+
+    60% {
+        transform: translateX(800px) translateY(-200px) rotate(135deg) scale(1.8);
+        opacity: 0.6;
+    }
+
+    80% {
+        transform: translateX(1100px) translateY(-100px) rotate(180deg) scale(2);
+        opacity: 0.3;
+    }
+
+    90% {
+        opacity: 0;
+    }
+}
+
+@keyframes swordFloat {
+    0% {
+        transform: translateY(100vh) translateX(0px) scale(0.4) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(600px) scale(2.2) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes prophecyShine {
+    0% {
+        transform: translateY(100vh) translateX(0px) scale(0.3);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-80px) translateX(500px) scale(2.5);
+        opacity: 0;
+    }
+}
+
+@keyframes flameRise {
+    0% {
+        transform: translateY(100vh) translateX(0px) scale(0.5);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-120px) translateX(700px) scale(2.8);
+        opacity: 0;
+    }
+}
+
+.main-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Divine Header */
+.divine-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.25), rgba(25, 101, 192, 0.2), rgba(255, 193, 7, 0.15));
+    border-radius: 30px;
+    border: 3px solid rgba(13, 71, 161, 0.4);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(13, 71, 161, 0.3);
+}
+
+.divine-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(13, 71, 161, 0.3), transparent);
+    animation: rotate 25s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.divine-header .content {
+    position: relative;
+    z-index: 2;
+}
+
+.divine-header h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(45deg, #0d47a1, #ffffff, #ffc107, #1e88e5);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+    text-shadow: 0 0 40px rgba(13, 71, 161, 0.8);
+    animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.divine-header .sanskrit {
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    color: #ffc107;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 25px rgba(255, 193, 7, 0.8);
+}
+
+.divine-header .subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    color: #e3f2fd;
+    font-style: italic;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Sacred Symbols */
+.sacred-symbols {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.symbol {
+    font-size: 3.5rem;
+    animation: symbolPower 6s ease-in-out infinite;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.symbol::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #ffc107;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.symbol:hover::after {
+    opacity: 1;
+}
+
+.symbol:hover {
+    transform: scale(1.4) rotate(360deg);
+    text-shadow: 0 0 50px currentColor;
+}
+
+@keyframes symbolPower {
+
+    0%,
+    100% {
+        opacity: 0.9;
+        transform: rotateY(0deg) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotateY(180deg) scale(1.1);
+    }
+}
+
+/* Prophecy Section */
+.prophecy-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.2), rgba(25, 101, 192, 0.15), rgba(255, 193, 7, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(13, 71, 161, 0.3);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(13, 71, 161, 0.25);
+}
+
+.prophecy-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="6" fill="rgba(13,71,161,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+    opacity: 0.4;
+}
+
+.prophecy-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #0d47a1;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 30px rgba(13, 71, 161, 0.6);
+}
+
+.prophecy-content {
+    position: relative;
+    z-index: 2;
+}
+
+.prophecy-verse {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.2), rgba(25, 101, 192, 0.15), rgba(255, 193, 7, 0.1));
+    border: 3px solid rgba(13, 71, 161, 0.25);
+    border-radius: 25px;
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(13, 71, 161, 0.15);
+}
+
+.prophecy-verse::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #0d47a1, #ffffff, #ffc107, #0d47a1);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.prophecy-verse:hover::before {
+    opacity: 1;
+}
+
+.prophecy-verse:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(13, 71, 161, 0.4);
+}
+
+.verse-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.verse-icon {
+    font-size: 4rem;
+    min-width: 80px;
+    text-align: center;
+    animation: verseGlow 5s ease-in-out infinite;
+}
+
+@keyframes verseGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px currentColor;
+    }
+
+    50% {
+        text-shadow: 0 0 40px currentColor, 0 0 60px currentColor;
+    }
+}
+
+.verse-info h3 {
+    font-size: 1.8rem;
+    color: #0d47a1;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(13, 71, 161, 0.5);
+}
+
+.verse-info .sanskrit-title {
+    font-size: 1.1rem;
+    color: #ffc107;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.verse-text {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.verse-significance {
+    background: rgba(13, 71, 161, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #0d47a1;
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Kali Yuga Section */
+.kaliyuga-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(183, 28, 28, 0.15), rgba(13, 71, 161, 0.12), rgba(255, 193, 7, 0.08));
+    border-radius: 30px;
+    border: 3px solid rgba(183, 28, 28, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(183, 28, 28, 0.2);
+}
+
+.kaliyuga-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #b71c1c;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 30px rgba(183, 28, 28, 0.6);
+}
+
+.kaliyuga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.kaliyuga-card {
+    background: linear-gradient(135deg, rgba(183, 28, 28, 0.18), rgba(13, 71, 161, 0.15), rgba(255, 193, 7, 0.1));
+    border: 3px solid rgba(183, 28, 28, 0.25);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(183, 28, 28, 0.15);
+}
+
+.kaliyuga-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #b71c1c, #0d47a1, #ffc107, #b71c1c);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.kaliyuga-card:hover::before {
+    opacity: 1;
+}
+
+.kaliyuga-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(183, 28, 28, 0.4);
+}
+
+.kaliyuga-visual {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: kaliyugaGlow 6s ease-in-out infinite;
+}
+
+@keyframes kaliyugaGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px #b71c1c;
+        transform: scale(1);
+    }
+
+    50% {
+        text-shadow: 0 0 40px #b71c1c, 0 0 60px #ff5722;
+        transform: scale(1.05);
+    }
+}
+
+.kaliyuga-content h3 {
+    font-size: 1.6rem;
+    color: #b71c1c;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(183, 28, 28, 0.5);
+}
+
+.kaliyuga-description {
+    font-size: 1rem;
+    color: #f0f0f0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.kaliyuga-impact {
+    background: rgba(183, 28, 28, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 4px solid #b71c1c;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Arrival Section */
+.arrival-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.2), rgba(13, 71, 161, 0.15), rgba(76, 175, 80, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 193, 7, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(255, 193, 7, 0.2);
+}
+
+.arrival-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #ffc107;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 30px rgba(255, 193, 7, 0.6);
+}
+
+.arrival-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.arrival-card {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.18), rgba(13, 71, 161, 0.15), rgba(76, 175, 80, 0.1));
+    border: 3px solid rgba(255, 193, 7, 0.25);
+    border-radius: 25px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(255, 193, 7, 0.15);
+}
+
+.arrival-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 193, 7, 0.15), transparent);
+    animation: rotate 12s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.arrival-card:hover::before {
+    opacity: 1;
+}
+
+.arrival-card:hover {
+    transform: scale(1.05);
+    border-color: #ffc107;
+    box-shadow: 0 20px 40px rgba(255, 193, 7, 0.4);
+}
+
+.arrival-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.arrival-name {
+    font-size: 1.4rem;
+    color: #ffc107;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+}
+
+.arrival-description {
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Mission Section */
+.mission-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(13, 71, 161, 0.12), rgba(255, 193, 7, 0.08));
+    border-radius: 30px;
+    border: 3px solid rgba(76, 175, 80, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.2);
+}
+
+.mission-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #4caf50;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 30px rgba(76, 175, 80, 0.6);
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.mission-card {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.18), rgba(13, 71, 161, 0.15), rgba(255, 193, 7, 0.1));
+    border: 3px solid rgba(76, 175, 80, 0.25);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(76, 175, 80, 0.15);
+}
+
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(76, 175, 80, 0.15), transparent);
+    animation: rotate 16s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mission-card:hover::before {
+    opacity: 1;
+}
+
+.mission-card:hover {
+    transform: scale(1.05);
+    border-color: #4caf50;
+    box-shadow: 0 25px 50px rgba(76, 175, 80, 0.4);
+}
+
+.mission-icon {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 25px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.mission-name {
+    font-size: 1.6rem;
+    color: #4caf50;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
+}
+
+.mission-description {
+    font-size: 1rem;
+    color: #f0f0f0;
+    line-height: 1.7;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kaliyuga-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arrival-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .verse-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .divine-header {
+        padding: 60px 20px;
+    }
+
+    .prophecy-section,
+    .kaliyuga-section,
+    .arrival-section,
+    .mission-section {
+        padding: 40px 20px;
+    }
+
+    .sacred-symbols {
+        gap: 30px;
+    }
+
+    .symbol {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+}

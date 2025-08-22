@@ -1,0 +1,810 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Marcellus:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', 'Noto Sans Devanagari', serif;
+    background: linear-gradient(135deg, #8B0000 0%, #DC143C 15%, #FF4500 30%, #FF6347 45%, #FFD700 60%, #FFA500 75%, #FF8C00 90%, #B22222 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Divine Warrior Background Animation */
+.divine-warrior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.fire-wave {
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.15) 0%, rgba(220, 20, 60, 0.12) 40%, transparent 70%);
+    border-radius: 50%;
+    animation: fireFlow 20s infinite linear;
+}
+
+.fire-wave:nth-child(2) {
+    animation-delay: -10s;
+    animation-duration: 25s;
+}
+
+.divine-axe {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background: linear-gradient(180deg, rgba(255, 215, 0, 0.8), rgba(255, 69, 0, 0.6));
+    clip-path: polygon(40% 0%, 60% 0%, 100% 40%, 60% 100%, 40% 100%, 0% 40%);
+    animation: axeJourney 12s ease-in-out infinite;
+}
+
+.warrior-flame {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.9), rgba(220, 20, 60, 0.5));
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flameRise 8s linear infinite;
+}
+
+.dharma-light {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.8), rgba(255, 165, 0, 0.4));
+    border-radius: 50%;
+    animation: dharmaGlow 10s linear infinite;
+}
+
+.battle-spark {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(255, 215, 0, 0.7));
+    border-radius: 50%;
+    animation: sparkFly 6s linear infinite;
+}
+
+@keyframes fireFlow {
+
+    0%,
+    100% {
+        transform: scale(0.8) rotate(0deg);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(2.2) rotate(180deg);
+        opacity: 0.15;
+    }
+}
+
+@keyframes axeJourney {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    25% {
+        transform: translateY(-100px) rotate(90deg);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-200px) rotate(180deg);
+        opacity: 0.9;
+    }
+
+    75% {
+        transform: translateY(-100px) rotate(270deg);
+        opacity: 1;
+    }
+}
+
+@keyframes flameRise {
+    0% {
+        transform: translateY(100vh) translateX(0px) scale(0.3);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(150px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+@keyframes dharmaGlow {
+    0% {
+        transform: translateY(100vh) translateX(0px) scale(0.3);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(200px) scale(1.8);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkFly {
+    0% {
+        transform: translateY(100vh) translateX(0px) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-50px) translateX(300px) scale(2);
+        opacity: 0;
+    }
+}
+
+.main-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Divine Header */
+.divine-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 80px 40px;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.2), rgba(220, 20, 60, 0.15), rgba(255, 215, 0, 0.1));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 69, 0, 0.4);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(255, 69, 0, 0.3);
+}
+
+.divine-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 69, 0, 0.2), transparent);
+    animation: rotate 25s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.divine-header .content {
+    position: relative;
+    z-index: 2;
+}
+
+.divine-header h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(45deg, #FF4500, #DC143C, #FFD700, #FF6347);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 25px;
+    text-shadow: 0 0 40px rgba(255, 69, 0, 0.8);
+    animation: gradientShift 6s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.divine-header .sanskrit {
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    color: #FFD700;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+}
+
+.divine-header .subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    color: #FFA500;
+    font-style: italic;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Sacred Symbols */
+.sacred-symbols {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.symbol {
+    font-size: 3.5rem;
+    animation: symbolPower 5s ease-in-out infinite;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.symbol::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    color: #FFD700;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+.symbol:hover::after {
+    opacity: 1;
+}
+
+.symbol:hover {
+    transform: scale(1.4) rotate(360deg);
+    text-shadow: 0 0 50px currentColor;
+}
+
+@keyframes symbolPower {
+
+    0%,
+    100% {
+        opacity: 0.9;
+        transform: rotateY(0deg) scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotateY(180deg) scale(1.1);
+    }
+}
+
+/* Story Section */
+.story-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.15), rgba(220, 20, 60, 0.12), rgba(255, 215, 0, 0.08));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 69, 0, 0.3);
+    backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(255, 69, 0, 0.2);
+}
+
+.story-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="axes" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M10,5 L15,10 L10,15 L5,10 Z" fill="rgba(255,69,0,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23axes)"/></svg>');
+    opacity: 0.3;
+}
+
+.story-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #FF4500;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 30px rgba(255, 69, 0, 0.6);
+}
+
+.story-content {
+    position: relative;
+    z-index: 2;
+}
+
+.story-chapter {
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.18), rgba(220, 20, 60, 0.15), rgba(255, 215, 0, 0.1));
+    border: 3px solid rgba(255, 69, 0, 0.25);
+    border-radius: 25px;
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(255, 69, 0, 0.15);
+}
+
+.story-chapter::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #FF4500, #DC143C, #FFD700, #FF4500);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.story-chapter:hover::before {
+    opacity: 1;
+}
+
+.story-chapter:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(255, 69, 0, 0.4);
+}
+
+.chapter-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.chapter-icon {
+    font-size: 4rem;
+    min-width: 80px;
+    text-align: center;
+    animation: chapterGlow 4s ease-in-out infinite;
+}
+
+@keyframes chapterGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px currentColor;
+    }
+
+    50% {
+        text-shadow: 0 0 40px currentColor, 0 0 60px currentColor;
+    }
+}
+
+.chapter-info h3 {
+    font-size: 1.8rem;
+    color: #FF4500;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+}
+
+.chapter-info .sanskrit-title {
+    font-size: 1.1rem;
+    color: #FFD700;
+    font-family: 'Noto Sans Devanagari', serif;
+}
+
+.chapter-text {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.chapter-significance {
+    background: rgba(255, 69, 0, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #FF4500;
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Verses Section */
+.verses-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(220, 20, 60, 0.15), rgba(255, 69, 0, 0.12), rgba(255, 215, 0, 0.08));
+    border-radius: 30px;
+    border: 3px solid rgba(220, 20, 60, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(220, 20, 60, 0.2);
+}
+
+.verses-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #DC143C;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 30px rgba(220, 20, 60, 0.6);
+}
+
+.verses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+}
+
+.verse-card {
+    background: linear-gradient(135deg, rgba(220, 20, 60, 0.18), rgba(255, 69, 0, 0.15), rgba(255, 215, 0, 0.1));
+    border: 3px solid rgba(220, 20, 60, 0.25);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(220, 20, 60, 0.15);
+}
+
+.verse-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #DC143C, #FF4500, #FFD700, #DC143C);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.verse-card:hover::before {
+    opacity: 1;
+}
+
+.verse-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(220, 20, 60, 0.4);
+}
+
+.verse-visual {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 25px;
+    animation: verseGlow 5s ease-in-out infinite;
+}
+
+@keyframes verseGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px #DC143C;
+        transform: scale(1);
+    }
+
+    50% {
+        text-shadow: 0 0 40px #DC143C, 0 0 60px #FF4500;
+        transform: scale(1.05);
+    }
+}
+
+.verse-content h3 {
+    font-size: 1.6rem;
+    color: #DC143C;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(220, 20, 60, 0.5);
+}
+
+.verse-sanskrit {
+    font-size: 1.3rem;
+    color: #FFD700;
+    margin-bottom: 20px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    background: rgba(255, 69, 0, 0.08);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    line-height: 1.8;
+}
+
+.verse-translation {
+    font-size: 1rem;
+    color: #f0f0f0;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.verse-meaning {
+    background: rgba(255, 69, 0, 0.08);
+    padding: 15px;
+    border-radius: 15px;
+    border-left: 4px solid #DC143C;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Powers Section */
+.powers-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 69, 0, 0.12), rgba(220, 20, 60, 0.08));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 215, 0, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+}
+
+.powers-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #FFD700;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+.powers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.power-card {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.18), rgba(255, 69, 0, 0.15), rgba(220, 20, 60, 0.1));
+    border: 3px solid rgba(255, 215, 0, 0.25);
+    border-radius: 25px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(255, 215, 0, 0.15);
+}
+
+.power-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 215, 0, 0.15), transparent);
+    animation: rotate 10s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.power-card:hover::before {
+    opacity: 1;
+}
+
+.power-card:hover {
+    transform: scale(1.05);
+    border-color: #FFD700;
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.4);
+}
+
+.power-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.power-name {
+    font-size: 1.4rem;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.power-sanskrit {
+    font-size: 1rem;
+    color: #FFA500;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans Devanagari', serif;
+    position: relative;
+    z-index: 2;
+}
+
+.power-description {
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Significance Section */
+.significance-section {
+    margin: 80px 0;
+    padding: 60px;
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.15), rgba(220, 20, 60, 0.12), rgba(255, 215, 0, 0.08));
+    border-radius: 30px;
+    border: 3px solid rgba(255, 69, 0, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(255, 69, 0, 0.2);
+}
+
+.significance-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #FF4500;
+    margin-bottom: 60px;
+    font-family: 'Noto Sans Devanagari', serif;
+    text-shadow: 0 0 30px rgba(255, 69, 0, 0.6);
+}
+
+.significance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.significance-card {
+    background: linear-gradient(135deg, rgba(255, 69, 0, 0.18), rgba(220, 20, 60, 0.15), rgba(255, 215, 0, 0.1));
+    border: 3px solid rgba(255, 69, 0, 0.25);
+    border-radius: 25px;
+    padding: 40px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(255, 69, 0, 0.15);
+}
+
+.significance-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(255, 69, 0, 0.15), transparent);
+    animation: rotate 14s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.significance-card:hover::before {
+    opacity: 1;
+}
+
+.significance-card:hover {
+    transform: scale(1.05);
+    border-color: #FF4500;
+    box-shadow: 0 25px 50px rgba(255, 69, 0, 0.4);
+}
+
+.significance-icon {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 25px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.significance-name {
+    font-size: 1.6rem;
+    color: #FF4500;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
+}
+
+.significance-description {
+    font-size: 1rem;
+    color: #f0f0f0;
+    line-height: 1.7;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .verses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .powers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .significance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chapter-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .divine-header {
+        padding: 60px 20px;
+    }
+
+    .story-section,
+    .verses-section,
+    .powers-section,
+    .significance-section {
+        padding: 40px 20px;
+    }
+
+    .sacred-symbols {
+        gap: 30px;
+    }
+
+    .symbol {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    .verse-sanskrit {
+        font-size: 1.1rem;
+    }
+}
