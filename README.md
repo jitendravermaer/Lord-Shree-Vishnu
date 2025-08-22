@@ -104,7 +104,7 @@ Lord Vishnu/
     <td align="center" style="border:1px solid #ddd; padding:15px; background:#f9f9f9;">
       <b>6. Parashurama – The Warrior</b><br>
       (destroys corrupt Kshatriyas)<br>
-      <img src="images/parashurama-avatar.jpg" alt="Parashurama Avatar" width="400">
+      <img src="images/parashurama-avatar.png" alt="Parashurama Avatar" width="400">
     </td>
   </tr>
   <tr>
