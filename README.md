@@ -84,7 +84,7 @@ Lord Vishnu/
 
 ## 🙏 Credits
 - **Content**: Inspired by Hindu Scriptures (Dashavatara).  
-- **Design & Development**: **[Your Name]**  
+- **Design & Development**: **Jitendra Verma**  
 - **Frameworks/Tools**: Pure **HTML + CSS**, no external frameworks.  
 
 ---
